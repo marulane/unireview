@@ -15,6 +15,12 @@ public class Carrera {
 		Carrera.total++;
 		this.idcarrera = Carrera.total;
 	}
+	
+	//Constructor vacío
+	public Carrera() {
+		Carrera.total++;
+		this.idcarrera= Carrera.total;
+	}
 
 
 	//getters and setters
