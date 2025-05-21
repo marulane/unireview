@@ -5,8 +5,8 @@ import java.time.LocalDate;
 public class Publicacion {
 	private Long idpublicacion;
 	private String publi_comentario;
-	private LocalDate publi_fecha;
-	private int publi_calificacion;
+	private String publi_fecha;
+	private Integer publi_calificacion;
 	private String publi_etiqueta;
 	private String publi_tipo_usuario;
 	private static Long total = Long.valueOf(0);
@@ -15,7 +15,7 @@ public class Publicacion {
 	private Carrera carrera;
 	
 	//constructor
-	public Publicacion(String publi_comentario, LocalDate publi_fecha, int publi_calificacion, String publi_etiqueta,
+	public Publicacion(String publi_comentario, String publi_fecha, int publi_calificacion, String publi_etiqueta,
 			String publi_tipo_usuario, Usuario usuario, Escuela escuela, Carrera carrera) {
 		super();
 		this.publi_comentario = publi_comentario;
@@ -29,6 +29,12 @@ public class Publicacion {
 		Publicacion.total++;
 		this.idpublicacion = Publicacion.total;
 	}
+	
+	//Constructor vacío
+	public Publicacion() {
+		Publicacion.total++;
+		this.idpublicacion= Publicacion.total;
+	}
 
 	//getters and setters
 	public String getPubli_comentario() {
@@ -38,19 +44,19 @@ public class Publicacion {
 		this.publi_comentario = publi_comentario;
 	}
 
-	public LocalDate getPubli_fecha() {
+	public String getPubli_fecha() {
 		return publi_fecha;
 	}
 
-	public void setPubli_fecha(LocalDate publi_fecha) {
+	public void setPubli_fecha(String publi_fecha) {
 		this.publi_fecha = publi_fecha;
 	}
 
-	public int getPubli_calificacion() {
+	public Integer getPubli_calificacion() {
 		return publi_calificacion;
 	}
 
-	public void setPubli_calificacion(int publi_calificacion) {
+	public void setPubli_calificacion(Integer publi_calificacion) {
 		this.publi_calificacion = publi_calificacion;
 	}
 
@@ -106,3 +112,4 @@ public class Publicacion {
 	
 	
 }
+
