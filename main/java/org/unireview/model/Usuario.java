@@ -15,15 +15,22 @@ public class Usuario {
 	// constructor
 	public Usuario(String usu_nombre, String usu_email, String usu_telefono, String usu_password,
 			String usu_fechaNacimiento, String usu_foto_perfil) {
+		super();
+		Usuario.total++;
 		this.usu_nombre = usu_nombre;
 		this.usu_email = usu_email;
 		this.usu_telefono = usu_telefono;
 		this.usu_password = usu_password;
 		this.usu_fechaNacimiento = usu_fechaNacimiento;
 		this.usu_foto_perfil = usu_foto_perfil;
-		Usuario.total++;
 		this.idusuario = Usuario.total;
 		
+	}
+	
+	//Constructor vacío
+	public Usuario() {
+		Usuario.total++;
+		this.idusuario = Usuario.total;
 	}
 	
 	

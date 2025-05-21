@@ -27,24 +27,50 @@ public class UsuarioService {
 	}
 
 	public Usuario getUsuario(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		Usuario usuarioTemp = null;
+		for (Usuario usu : lista) {
+			if(usu.getIdusuario()==id) {
+				usuarioTemp= usu;
+				break;
+			}
+		}
+		return usuarioTemp;
 	}
 
 	public Usuario deleteUsuario(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		Usuario usuarioTemp = null;
+		for (Usuario usuario : lista) {
+			if(usuario.getIdusuario()==id) {
+				usuarioTemp= usuario;
+				lista.remove(usuario);
+				break;
+			}
+		}
+		return usuarioTemp;
 	}
 
-	public Usuario addProduct(Usuario usuario) {
+	public Usuario addUsuario(Usuario usuario) {
 		lista.add(usuario);
 		return usuario;
 	}
 
 	public Usuario updateUsuario(Long id, String usu_nombre, String usu_email, String usu_telefono, String usu_password,
 			String usu_fechaNacimiento, String usu_foto_perfil) {
-		// TODO Auto-generated method stub
-		return null;
+		Usuario usuarioTemp = null;
+		for (Usuario usuario : lista) {
+			if(usuario.getIdusuario()==id) {
+				if(usu_nombre!=null) usuario.setUsu_nombre(usu_nombre);
+				if(usu_email!=null) usuario.setUsu_email(usu_email);
+				if(usu_telefono!=null) usuario.setUsu_telefono(usu_telefono);
+				if(usu_password!=null) usuario.setUsu_password(usu_password);
+				if(usu_fechaNacimiento!=null) usuario.setUsu_fechaNacimiento(usu_fechaNacimiento);
+				if(usu_foto_perfil!=null) usuario.setUsu_foto_perfil(usu_foto_perfil);
+				
+				usuarioTemp= usuario;
+				break;
+			}
+		}
+		return usuarioTemp;
 	}
 
 }

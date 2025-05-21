@@ -16,7 +16,7 @@ import org.unireview.model.Usuario;
 import org.unireview.service.UsuarioService;
 
 @RestController
-@RequestMapping(path = "/unireview/usuarios")
+@RequestMapping(path = "/unireview/usuarios/")
 public class UsuarioController {
 	private final UsuarioService usuarioService;
 
@@ -43,7 +43,7 @@ public class UsuarioController {
 	
 	@PostMapping
 	public Usuario addUsuario(@RequestBody Usuario usuario) {
-		return usuarioService.addProduct(usuario);
+		return usuarioService.addUsuario(usuario);
 	}
 	
 	@PutMapping(path="{userId}")
