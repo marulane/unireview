@@ -16,6 +16,12 @@ public class Escuela {
 		Escuela.total++;
 		this.idescuela = Escuela.total;
 	}
+	
+	//constructor vacio
+	public Escuela() {
+		Escuela.total++;
+		this.idescuela = Escuela.total;
+	}
 
 	//getters and setters
 	public String getEsc_nombre() {
