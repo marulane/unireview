@@ -8,29 +8,39 @@ import org.springframework.stereotype.Service;
 import org.unireview.model.Carrera;
 import org.unireview.model.Escuela;
 import org.unireview.model.OfertaEducativa;
+import org.unireview.repository.CarreraRepository;
+import org.unireview.repository.EscuelaRepository;
+import org.unireview.repository.OfertaEducativaRepository;
 
 @Service
 public class OfertaEducativaService {
 
-	private final List<OfertaEducativa> lista = new ArrayList<>();
+//	private final List<OfertaEducativa> lista = new ArrayList<>();
+//	private final List<Escuela> escuelas;
+//	private final List<Carrera> carreras;
 
-	private final List<Escuela> escuelas;
-	private final List<Carrera> carreras;
+	private final OfertaEducativaRepository ofertaEducativaRepository;
+	
+	
+	
+//	public OfertaEducativaService(EscuelaService escuelaService, CarreraService carreraService) {
+//		this.escuelas = new ArrayList<>(escuelaService.getEscuelas());
+//		this.carreras = new ArrayList<>(carreraService.getCarrera());
+//
+//		// Ejemplos de ofertas educativas cargadas inicialmente
+//		lista.add(new OfertaEducativa("https://tecmilenio.mx/es/ingenieria-en-mecatronica", escuelas.get(0), carreras.get(0)));
+//		lista.add(new OfertaEducativa("https://www.upiita.ipn.mx/oferta-educativa/telematica", escuelas.get(2), carreras.get(2)));
+//		lista.add(new OfertaEducativa("https://oferta.unam.mx/arquitectura.html", escuelas.get(1), carreras.get(3)));
+//	}
 
-	@Autowired
-	public OfertaEducativaService(EscuelaService escuelaService, CarreraService carreraService) {
-		this.escuelas = new ArrayList<>(escuelaService.getEscuelas());
-		this.carreras = new ArrayList<>(carreraService.getCarrera());
+	protected OfertaEducativaService(OfertaEducativaRepository ofertaEducativaRepository) {
+		this.ofertaEducativaRepository = ofertaEducativaRepository;
 
-		// Ejemplos de ofertas educativas cargadas inicialmente
-		lista.add(new OfertaEducativa("https://tecmilenio.mx/es/ingenieria-en-mecatronica", escuelas.get(0), carreras.get(0)));
-		lista.add(new OfertaEducativa("https://www.upiita.ipn.mx/oferta-educativa/telematica", escuelas.get(2), carreras.get(2)));
-		lista.add(new OfertaEducativa("https://oferta.unam.mx/arquitectura.html", escuelas.get(1), carreras.get(3)));
-	}
-
+	}//constructor
+	
 	public List<OfertaEducativa> getOfertas() {
-		return lista;
-	}
+		return ofertaEducativaRepository.findAll() ;
+	}//getOfertas
 
 	public OfertaEducativa getOferta(Integer id) {
 		for (OfertaEducativa oferta : lista) {
@@ -68,4 +78,6 @@ public class OfertaEducativaService {
 		}//for lista
 		return ofertaTemp;
 	}
+
+
 }
