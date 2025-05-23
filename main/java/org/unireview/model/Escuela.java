@@ -3,15 +3,15 @@ package org.unireview.model;
 public class Escuela {
 	private Long idescuela;
 	private String esc_nombre;
-	private String esc_estado;
+	private String esc_ubicacion;
 	private String esc_enlace;
 	private static Long total = Long.valueOf(0);
 	
 	//constructor
-	public Escuela(String esc_nombre, String esc_estado, String esc_enlace) {
+	public Escuela(String esc_nombre, String esc_ubicacion, String esc_enlace) {
 		super();
 		this.esc_nombre = esc_nombre;
-		this.esc_estado = esc_estado;
+		this.esc_ubicacion = esc_ubicacion;
 		this.esc_enlace = esc_enlace;
 		Escuela.total++;
 		this.idescuela = Escuela.total;
@@ -32,12 +32,12 @@ public class Escuela {
 		this.esc_nombre = esc_nombre;
 	}
 
-	public String getEsc_estado() {
-		return esc_estado;
+	public String getesc_ubicacion() {
+		return esc_ubicacion;
 	}
 
-	public void setEsc_estado(String esc_estado) {
-		this.esc_estado = esc_estado;
+	public void setesc_ubicacion(String esc_ubicacion) {
+		this.esc_ubicacion = esc_ubicacion;
 	}
 
 	public String getEsc_enlace() {
@@ -56,7 +56,7 @@ public class Escuela {
 	// to string
 	@Override
 	public String toString() {
-		return "Escuela [idescuela=" + idescuela + ", esc_nombre=" + esc_nombre + ", esc_estado=" + esc_estado
+		return "Escuela [idescuela=" + idescuela + ", esc_nombre=" + esc_nombre + ", esc_ubicacion=" + esc_ubicacion
 				+ ", esc_enlace=" + esc_enlace + "]";
 	}
 	

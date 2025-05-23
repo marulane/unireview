@@ -59,12 +59,12 @@ public class EscuelaService {
 	}
 
 	//PUT
-	public Escuela updateEscuela(Long id, String esc_nombre, String esc_estado, String esc_enlace) {
+	public Escuela updateEscuela(Long id, String esc_nombre, String esc_ubicacion, String esc_enlace) {
 		Escuela escTemp = null;
 		for(Escuela escuela : lista) {
 			if(escuela.getIdescuela()==id) {
 				if(esc_nombre!=null) escuela.setEsc_nombre(esc_nombre);
-				if(esc_estado!=null) escuela.setEsc_estado(esc_estado);
+				if(esc_ubicacion!=null) escuela.setesc_ubicacion(esc_ubicacion);
 				if(esc_enlace!=null) escuela.setEsc_enlace(esc_enlace);
 				
 				escTemp = escuela;

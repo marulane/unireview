@@ -17,6 +17,11 @@ public class OfertaEducativa {
 		OfertaEducativa.total++;
 		this.idoferta_educativa = OfertaEducativa.total;
 	}
+	
+	public OfertaEducativa() {
+		OfertaEducativa.total++;
+		this.idoferta_educativa= OfertaEducativa.total;
+	}
 
 	//getters and setters
 	public String getOfed_enlace() {

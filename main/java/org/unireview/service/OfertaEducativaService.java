@@ -55,12 +55,17 @@ public class OfertaEducativaService {
 	}
 
 	public OfertaEducativa updateOferta(Long id, String ofed_enlace, Escuela escuela, Carrera carrera) {
-		OfertaEducativa oferta = getOferta(id);
-		if (oferta != null) {
-			if (ofed_enlace != null) oferta.setOfed_enlace(ofed_enlace);
-			if (escuela != null) oferta.setEscuela(escuela);
-			if (carrera != null) oferta.setCarrera(carrera);
-		}
-		return oferta;
+		OfertaEducativa ofertaTemp = null;
+		for(OfertaEducativa oferta : lista) {
+			if (oferta.getIdoferta_educativa() == id) {
+				if (ofed_enlace != null) oferta.setOfed_enlace(ofed_enlace);
+				if (escuela != null) oferta.setEscuela(escuela);
+				if (carrera != null) oferta.setCarrera(carrera);
+				
+				ofertaTemp=oferta;
+				break;
+			}//if=id
+		}//for lista
+		return ofertaTemp;
 	}
 }

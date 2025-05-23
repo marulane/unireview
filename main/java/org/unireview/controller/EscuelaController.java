@@ -49,10 +49,10 @@ public class EscuelaController {
 	@PutMapping(path = "{escuelaId}")
 	public Escuela updateEscuela(@PathVariable("escuelaId") Long id,
 			@RequestParam(required = false) String esc_nombre,
-			@RequestParam(required = false) String esc_estado,
+			@RequestParam(required = false) String esc_ubicacion,
 			@RequestParam(required = false) String esc_enlace) {
 		
-		return escuelaService.updateEscuela(id, esc_nombre, esc_estado, esc_enlace);
+		return escuelaService.updateEscuela(id, esc_nombre, esc_ubicacion, esc_enlace);
 	}
 	
 
