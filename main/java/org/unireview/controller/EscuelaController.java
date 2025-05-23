@@ -32,12 +32,12 @@ public class EscuelaController {
 	}
 	
 	@GetMapping(path = "{escuelaId}")
-	public Escuela getEscuela(@PathVariable("escuelaId") Long id) {
+	public Escuela getEscuela(@PathVariable("escuelaId") Integer id) {
 		return escuelaService.getEscuela(id);
 	}
 	
 	@DeleteMapping(path = "{escuelaId}")
-	public Escuela deleteEscuela(@PathVariable("escuelaId") Long id) {
+	public Escuela deleteEscuela(@PathVariable("escuelaId") Integer id) {
 		return escuelaService.deleteEscuela(id);
 	}
 	
@@ -47,7 +47,7 @@ public class EscuelaController {
 	}
 	
 	@PutMapping(path = "{escuelaId}")
-	public Escuela updateEscuela(@PathVariable("escuelaId") Long id,
+	public Escuela updateEscuela(@PathVariable("escuelaId") Integer id,
 			@RequestParam(required = false) String esc_nombre,
 			@RequestParam(required = false) String esc_ubicacion,
 			@RequestParam(required = false) String esc_enlace) {

@@ -29,7 +29,7 @@ public class OfertaEducativaController {
 
 	
 	@GetMapping(path = "{ofertaId}")
-	public OfertaEducativa getOferta(@PathVariable("ofertaId") Long id) {
+	public OfertaEducativa getOferta(@PathVariable("ofertaId") Integer id) {
 		return ofertaEducativaService.getOferta(id);
 	}
 
@@ -41,14 +41,14 @@ public class OfertaEducativaController {
 
 	
 	@DeleteMapping(path = "{ofertaId}")
-	public OfertaEducativa deleteOferta(@PathVariable("ofertaId") Long id) {
+	public OfertaEducativa deleteOferta(@PathVariable("ofertaId") Integer id) {
 		return ofertaEducativaService.deleteOferta(id);
 	}
 
 	
 	@PutMapping(path = "{ofertaId}")
 	public OfertaEducativa updateOferta(
-		@PathVariable("ofertaId") Long id,
+		@PathVariable("ofertaId") Integer id,
 		@RequestParam(required = false) String ofed_enlace,
 		@RequestParam(required = false) Escuela escuela,
 		@RequestParam(required = false) Carrera carrera

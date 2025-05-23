@@ -1,10 +1,37 @@
 package org.unireview.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@Entity
+@Table(name = "ofertaEducativa")
 public class OfertaEducativa {
-	private Long idoferta_educativa;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="idoferta_educativa", unique = true, nullable = false)
+	private Integer idoferta_educativa;
+	
+	@Column(name="ofed_enlace", nullable = false)
 	private String ofed_enlace;
-	private static Long total = Long.valueOf(0);
+	//private static Long total = Long.valueOf(0);
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "idescuela_fk", referencedColumnName = "idescuela")
+	@JsonIgnoreProperties ({"hibernateLazyInitializer", "handler"})
 	private Escuela escuela;
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "idcarrera_fk", referencedColumnName = "idcarrera")
+	@JsonIgnoreProperties ({"hibernateLazyInitializer", "handler"})
 	private Carrera carrera;
 	
 	
@@ -14,13 +41,13 @@ public class OfertaEducativa {
 		this.ofed_enlace = ofed_enlace;
 		this.escuela = escuela;
 		this.carrera = carrera;
-		OfertaEducativa.total++;
-		this.idoferta_educativa = OfertaEducativa.total;
+		//OfertaEducativa.total++;
+		//this.idoferta_educativa = OfertaEducativa.total;
 	}
 	
 	public OfertaEducativa() {
-		OfertaEducativa.total++;
-		this.idoferta_educativa= OfertaEducativa.total;
+		//OfertaEducativa.total++;
+		//this.idoferta_educativa= OfertaEducativa.total;
 	}
 
 	//getters and setters
@@ -31,7 +58,7 @@ public class OfertaEducativa {
 	public void setOfed_enlace(String ofed_enlace) {
 		this.ofed_enlace = ofed_enlace;
 	}
-	public Long getIdoferta_educativa() {
+	public Integer getIdoferta_educativa() {
 		return idoferta_educativa;
 	}
 	

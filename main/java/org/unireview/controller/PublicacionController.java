@@ -36,12 +36,12 @@ public class PublicacionController {
 	}//getPublicaciones
 	
 	@GetMapping(path="{publiId}")
-	public Publicacion getPublicacion(@PathVariable("publiId") Long id) {
+	public Publicacion getPublicacion(@PathVariable("publiId") Integer id) {
 		return publicacionService.getPublicacion(id);
 	}//getPublicacion
 	
 	@DeleteMapping(path = "{publiId}")
-	public Publicacion deletePublicacion(@PathVariable("publiId") Long id) {
+	public Publicacion deletePublicacion(@PathVariable("publiId") Integer id) {
 		return publicacionService.deletePublicacion(id);
 	}//deletePublicacion
 
@@ -51,7 +51,7 @@ public class PublicacionController {
 	}//addPublicacion
 	
 	@PutMapping(path="{publiId}")
-	public Publicacion updateProducto(@PathVariable("publiId") Long id,
+	public Publicacion updateProducto(@PathVariable("publiId") Integer id,
 		@RequestParam(required = false) String publi_comentario,
 		@RequestParam(required = false) String publi_fecha,
 		@RequestParam(required = false) Integer publi_calificacion,

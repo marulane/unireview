@@ -23,7 +23,7 @@ public class CarreraService {
 		return lista;
 	}//getCarrera
 
-	public Carrera getCarreras(Long id) {
+	public Carrera getCarreras(Integer id) {
 		Carrera carrTemp = null;
 		for (Carrera carrera : lista) {
 			if(carrera.getIdcarrera()==id) {
@@ -34,7 +34,7 @@ public class CarreraService {
 		return carrTemp;
 	}//getCarreras
 
-	public Carrera deleteCarrera(Long id) {
+	public Carrera deleteCarrera(Integer id) {
 		Carrera carrTemp = null;
 		for (Carrera carrera : lista) {
 			if(carrera.getIdcarrera()==id) {
@@ -51,7 +51,7 @@ public class CarreraService {
 		return carrera;
 	}//addCarrera
 
-	public Carrera updateCarrera(Long id, String carr_nombre, Double carr_evaluacion_prom) {
+	public Carrera updateCarrera(Integer id, String carr_nombre, Double carr_evaluacion_prom) {
 		Carrera carrTemp = null;
 		for(Carrera carrera : lista) {
 			if(carrera.getIdcarrera()==id) {

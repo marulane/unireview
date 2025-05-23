@@ -1,17 +1,54 @@
 package org.unireview.model;
 
-import java.time.LocalDate;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@Entity
+@Table(name = "publicacion")
 public class Publicacion {
-	private Long idpublicacion;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="idpublicacion", unique = true, nullable = false)
+	private Integer idpublicacion;
+	
+	@Column(name="publi_comentario", nullable = false)
 	private String publi_comentario;
+	
+	@Column(name="publi_fecha", nullable = false)
 	private String publi_fecha;
+	
+	@Column(name="publi_calificacion", nullable = false)
 	private Integer publi_calificacion;
+	
+	@Column(name="publi_etiqueta")
 	private String publi_etiqueta;
+	
+	@Column(name="publi_tipo_usuario", nullable = false)
 	private String publi_tipo_usuario;
-	private static Long total = Long.valueOf(0);
+	
+	//private static Long total = Long.valueOf(0);
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "idusuario_fk", referencedColumnName = "idusuario")
+	@JsonIgnoreProperties ({"hibernateLazyInitializer", "handler"})
 	private Usuario usuario;
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "idescuela_fk", referencedColumnName = "idescuela")
+	@JsonIgnoreProperties ({"hibernateLazyInitializer", "handler"})
 	private Escuela escuela;
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "idcarrera_fk", referencedColumnName = "idcarrera")
+	@JsonIgnoreProperties ({"hibernateLazyInitializer", "handler"})
 	private Carrera carrera;
 	
 	//constructor
@@ -26,14 +63,14 @@ public class Publicacion {
 		this.usuario = usuario;
 		this.escuela = escuela;
 		this.carrera = carrera;
-		Publicacion.total++;
-		this.idpublicacion = Publicacion.total;
+		//Publicacion.total++;
+		//this.idpublicacion = Publicacion.total;
 	}
 	
 	//Constructor vacío
 	public Publicacion() {
-		Publicacion.total++;
-		this.idpublicacion= Publicacion.total;
+		//Publicacion.total++;
+		//this.idpublicacion= Publicacion.total;
 	}
 
 	//getters and setters
@@ -76,7 +113,7 @@ public class Publicacion {
 		this.publi_tipo_usuario = publi_tipo_usuario;
 	}
 
-	public Long getIdpublicacion() {
+	public Integer getIdpublicacion() {
 		return idpublicacion;
 	}
 	//llaves foraneas

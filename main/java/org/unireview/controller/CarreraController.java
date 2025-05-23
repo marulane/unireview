@@ -32,12 +32,12 @@ public class CarreraController {
 	}//getCarrera
 	
 	@GetMapping(path="{careerId}")
-	public Carrera getCarreras(@PathVariable("careerId") Long id){
+	public Carrera getCarreras(@PathVariable("careerId") Integer id){
 		return carreraService.getCarreras(id);
 	}//getCarreras
 	
 	@DeleteMapping(path="{careerId}")
-	public Carrera deleteCarrera(@PathVariable("careerId") Long id){
+	public Carrera deleteCarrera(@PathVariable("careerId") Integer id){
 		return carreraService.deleteCarrera(id);
 	}//DeleteCarrera
 	
@@ -47,7 +47,7 @@ public class CarreraController {
 	}//AddCarrera
 	
 	@PutMapping(path="{careerId}")
-	public Carrera updateCarrera(@PathVariable("careerId") Long id,
+	public Carrera updateCarrera(@PathVariable("careerId") Integer id,
 			@RequestParam(required = false) String carr_nombre,
 			@RequestParam(required = false) Double carr_evaluacion_prom) {
 			return carreraService.updateCarrera(id, carr_nombre, carr_evaluacion_prom);

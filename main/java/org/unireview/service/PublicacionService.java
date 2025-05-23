@@ -44,7 +44,7 @@ public class PublicacionService {
 		return lista;
 	}//getPublicaciones
 
-	public Publicacion getPublicacion(Long id) {
+	public Publicacion getPublicacion(Integer id) {
 		Publicacion publiTemp = null;
 		for(Publicacion publi : lista) {
 			if(publi.getIdpublicacion()==id) {
@@ -55,7 +55,7 @@ public class PublicacionService {
 		return publiTemp;
 	}//getPublicacion
 
-	public Publicacion deletePublicacion(Long id) {
+	public Publicacion deletePublicacion(Integer id) {
 		Publicacion publiTemp = null;
 		for(Publicacion publi : lista) {
 			if(publi.getIdpublicacion()==id) {
@@ -73,7 +73,7 @@ public class PublicacionService {
 	}//addPublicacion
 
 
-	public Publicacion updatePublicacion(Long id, String publi_comentario, String publi_fecha, Integer publi_calificacion,
+	public Publicacion updatePublicacion(Integer id, String publi_comentario, String publi_fecha, Integer publi_calificacion,
 			String publi_etiqueta, String publi_tipo_usuario, Usuario usuario, Escuela escuela, Carrera carrera) {
 		Publicacion publicacion = null;
 

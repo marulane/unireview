@@ -1,10 +1,26 @@
 package org.unireview.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "carrera")
 public class Carrera {
-	private Long idcarrera;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="idcarrera", unique = true, nullable = false)
+	private Integer idcarrera;
+	
+	@Column(name="carr_nombre", nullable = false)
 	private String carr_nombre;
+	
+	@Column(name="carr_evaluacion_prom", nullable = false)
 	private Double carr_evaluacion_prom;
-	private static Long total = Long.valueOf(0);
+	//private static Long total = Long.valueOf(0);
 	
 	
 	//constructor
@@ -12,19 +28,19 @@ public class Carrera {
 		super();
 		this.carr_nombre = carr_nombre;
 		this.carr_evaluacion_prom = carr_evaluacion_prom;
-		Carrera.total++;
-		this.idcarrera = Carrera.total;
+		//Carrera.total++;
+		//this.idcarrera = Carrera.total;
 	}
 	
 	//Constructor vacío
 	public Carrera() {
-		Carrera.total++;
-		this.idcarrera= Carrera.total;
+		//Carrera.total++;
+		//this.idcarrera= Carrera.total;
 	}
 
 
 	//getters and setters
-	public Long getIdcarrera() {
+	public Integer getIdcarrera() {
 		return idcarrera;
 	}
 	

@@ -1,11 +1,29 @@
 package org.unireview.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "escuela")
 public class Escuela {
-	private Long idescuela;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="idescuela", unique = true, nullable = false)
+	private Integer idescuela;
+	
+	@Column(name="esc_nombre", nullable = false)
 	private String esc_nombre;
+	
+	@Column(name="esc_ubicacion", nullable = false)
 	private String esc_ubicacion;
+	
+	@Column(name="esc_enlace", nullable = false)
 	private String esc_enlace;
-	private static Long total = Long.valueOf(0);
+	//private static Long total = Long.valueOf(0);
 	
 	//constructor
 	public Escuela(String esc_nombre, String esc_ubicacion, String esc_enlace) {
@@ -13,14 +31,14 @@ public class Escuela {
 		this.esc_nombre = esc_nombre;
 		this.esc_ubicacion = esc_ubicacion;
 		this.esc_enlace = esc_enlace;
-		Escuela.total++;
-		this.idescuela = Escuela.total;
+		//Escuela.total++;
+		//this.idescuela = Escuela.total;
 	}
 	
 	//constructor vacio
 	public Escuela() {
-		Escuela.total++;
-		this.idescuela = Escuela.total;
+		//Escuela.total++;
+		//this.idescuela = Escuela.total;
 	}
 
 	//getters and setters
@@ -48,7 +66,7 @@ public class Escuela {
 		this.esc_enlace = esc_enlace;
 	}
 
-	public Long getIdescuela() {
+	public Integer getIdescuela() {
 		return idescuela;
 	}
 	

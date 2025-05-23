@@ -1,36 +1,59 @@
 package org.unireview.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "usuario")
 public class Usuario {
-	private Long idusuario;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="idusuario", unique = true, nullable = false)
+	private Integer idusuario;
+	
+	@Column(name="usu_nombre", nullable = false)
 	private String usu_nombre;
+	
+	@Column(name="usu_email", unique = true, nullable = false)
 	private String usu_email;
+	
+	@Column(name="usu_telefono", nullable = false)
 	private String usu_telefono;
+	
+	@Column(name="usu_password", nullable = false)
 	private String usu_password;
+	
+	@Column(name="usu_fechaNacimiento", nullable = false)
 	private String usu_fechaNacimiento;
+	
+	@Column(name="usu_foto_perfil")
 	private String usu_foto_perfil;
-	private static Long total = Long.valueOf(0);
+	//private static Long total = Long.valueOf(0);
 	
 	
 	// constructor
 	public Usuario(String usu_nombre, String usu_email, String usu_telefono, String usu_password,
 			String usu_fechaNacimiento, String usu_foto_perfil) {
 		super();
-		Usuario.total++;
+		//Usuario.total++;
 		this.usu_nombre = usu_nombre;
 		this.usu_email = usu_email;
 		this.usu_telefono = usu_telefono;
 		this.usu_password = usu_password;
 		this.usu_fechaNacimiento = usu_fechaNacimiento;
 		this.usu_foto_perfil = usu_foto_perfil;
-		this.idusuario = Usuario.total;
+		//this.idusuario = Usuario.total;
 		
 	}
 	
 	//Constructor vacío
 	public Usuario() {
-		Usuario.total++;
-		this.idusuario = Usuario.total;
+		//Usuario.total++;
+		//this.idusuario = Usuario.total;
 	}
 	
 	
@@ -71,7 +94,7 @@ public class Usuario {
 	public void setUsu_foto_perfil(String usu_foto_perfil) {
 		this.usu_foto_perfil = usu_foto_perfil;
 	}
-	public Long getIdusuario() {
+	public Integer getIdusuario() {
 		return idusuario;
 	}
 

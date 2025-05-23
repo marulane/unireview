@@ -26,7 +26,7 @@ public class UsuarioService {
 		return lista;
 	}
 
-	public Usuario getUsuario(Long id) {
+	public Usuario getUsuario(Integer id) {
 		Usuario usuarioTemp = null;
 		for (Usuario usu : lista) {
 			if(usu.getIdusuario()==id) {
@@ -37,7 +37,7 @@ public class UsuarioService {
 		return usuarioTemp;
 	}
 
-	public Usuario deleteUsuario(Long id) {
+	public Usuario deleteUsuario(Integer id) {
 		Usuario usuarioTemp = null;
 		for (Usuario usuario : lista) {
 			if(usuario.getIdusuario()==id) {
@@ -54,7 +54,7 @@ public class UsuarioService {
 		return usuario;
 	}
 
-	public Usuario updateUsuario(Long id, String usu_nombre, String usu_email, String usu_telefono, String usu_password,
+	public Usuario updateUsuario(Integer id, String usu_nombre, String usu_email, String usu_telefono, String usu_password,
 			String usu_fechaNacimiento, String usu_foto_perfil) {
 		Usuario usuarioTemp = null;
 		for (Usuario usuario : lista) {

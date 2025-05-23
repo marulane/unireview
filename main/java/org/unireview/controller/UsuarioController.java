@@ -32,12 +32,12 @@ public class UsuarioController {
 	}
 	
 	@GetMapping(path = "{userId}") 	//obtener un usuario
-	public Usuario getUsuario(@PathVariable("userId") Long id) {
+	public Usuario getUsuario(@PathVariable("userId") Integer id) {
 		return usuarioService.getUsuario(id);
 	}
 	
 	@DeleteMapping(path = "{userId}")
-	public Usuario deleteUsuario(@PathVariable("userId") Long id) {
+	public Usuario deleteUsuario(@PathVariable("userId") Integer id) {
 		return usuarioService.deleteUsuario(id);
 	}
 	
@@ -47,7 +47,7 @@ public class UsuarioController {
 	}
 	
 	@PutMapping(path="{userId}")
-	public Usuario updateUsuario(@PathVariable("userId") Long id,
+	public Usuario updateUsuario(@PathVariable("userId") Integer id,
 		@RequestParam(required = false) String usu_nombre, 
 		@RequestParam(required = false) String usu_email, 
 		@RequestParam(required = false) String usu_telefono,

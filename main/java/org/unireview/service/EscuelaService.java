@@ -28,7 +28,7 @@ public class EscuelaService {
 	}
 
 	//GET uno solo
-	public Escuela getEscuela(Long id) {
+	public Escuela getEscuela(Integer id) {
 		Escuela escuelaTemp = null;
 		for (Escuela esc : lista) {
 			if(esc.getIdescuela()==id) {
@@ -40,7 +40,7 @@ public class EscuelaService {
 	}
 	
 	//DELETE
-	public Escuela deleteEscuela(Long id) {
+	public Escuela deleteEscuela(Integer id) {
 		Escuela escuelaTemp = null;
 		for (Escuela escuela : lista) {
 			if(escuela.getIdescuela()==id) {
@@ -59,7 +59,7 @@ public class EscuelaService {
 	}
 
 	//PUT
-	public Escuela updateEscuela(Long id, String esc_nombre, String esc_ubicacion, String esc_enlace) {
+	public Escuela updateEscuela(Integer id, String esc_nombre, String esc_ubicacion, String esc_enlace) {
 		Escuela escTemp = null;
 		for(Escuela escuela : lista) {
 			if(escuela.getIdescuela()==id) {

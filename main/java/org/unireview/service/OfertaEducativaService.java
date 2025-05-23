@@ -32,7 +32,7 @@ public class OfertaEducativaService {
 		return lista;
 	}
 
-	public OfertaEducativa getOferta(Long id) {
+	public OfertaEducativa getOferta(Integer id) {
 		for (OfertaEducativa oferta : lista) {
 			if (oferta.getIdoferta_educativa().equals(id)) {
 				return oferta;
@@ -46,7 +46,7 @@ public class OfertaEducativaService {
 		return oferta;
 	}
 
-	public OfertaEducativa deleteOferta(Long id) {
+	public OfertaEducativa deleteOferta(Integer id) {
 		OfertaEducativa ofertaAEliminar = getOferta(id);
 		if (ofertaAEliminar != null) {
 			lista.remove(ofertaAEliminar);
@@ -54,7 +54,7 @@ public class OfertaEducativaService {
 		return ofertaAEliminar;
 	}
 
-	public OfertaEducativa updateOferta(Long id, String ofed_enlace, Escuela escuela, Carrera carrera) {
+	public OfertaEducativa updateOferta(Integer id, String ofed_enlace, Escuela escuela, Carrera carrera) {
 		OfertaEducativa ofertaTemp = null;
 		for(OfertaEducativa oferta : lista) {
 			if (oferta.getIdoferta_educativa() == id) {
