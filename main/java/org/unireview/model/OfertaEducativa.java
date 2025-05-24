@@ -13,7 +13,7 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name = "ofertaEducativa")
+@Table(name = "ofertaeducativa")
 public class OfertaEducativa {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

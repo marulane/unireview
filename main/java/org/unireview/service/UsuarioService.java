@@ -25,7 +25,8 @@ public class UsuarioService {
 //		lista.add(new Usuario("Samantha", "correo7@gmail.com", "5581818181", "Samantha123", "2004, 7, 17", "img7.png"));
 //	}
 
-	protected UsuarioService(UsuarioRepository usuariorepository) {
+	@Autowired
+	public UsuarioService(UsuarioRepository usuariorepository) {
 		this.usuarioRepository = usuariorepository;
 	}//constructor
 	

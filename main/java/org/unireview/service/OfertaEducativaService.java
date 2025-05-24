@@ -1,5 +1,6 @@
 package org.unireview.service;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.unireview.model.Carrera;
 import org.unireview.model.Escuela;
 import org.unireview.model.OfertaEducativa;
+import org.unireview.model.Publicacion;
 import org.unireview.repository.CarreraRepository;
 import org.unireview.repository.EscuelaRepository;
 import org.unireview.repository.OfertaEducativaRepository;
@@ -33,7 +35,8 @@ public class OfertaEducativaService {
 //		lista.add(new OfertaEducativa("https://oferta.unam.mx/arquitectura.html", escuelas.get(1), carreras.get(3)));
 //	}
 
-	protected OfertaEducativaService(OfertaEducativaRepository ofertaEducativaRepository) {
+	@Autowired
+	public OfertaEducativaService(OfertaEducativaRepository ofertaEducativaRepository) {
 		this.ofertaEducativaRepository = ofertaEducativaRepository;
 
 	}//constructor
@@ -43,40 +46,38 @@ public class OfertaEducativaService {
 	}//getOfertas
 
 	public OfertaEducativa getOferta(Integer id) {
-		for (OfertaEducativa oferta : lista) {
-			if (oferta.getIdoferta_educativa().equals(id)) {
-				return oferta;
-			}
-		}
-		return null;
+		return ofertaEducativaRepository.findById(id).orElseThrow(
+				()-> new IllegalArgumentException("La carrera con el id[" + id + "] no existe."));
 	}
 
 	public OfertaEducativa addOferta(OfertaEducativa oferta) {
-		lista.add(oferta);
-		return oferta;
+		ofertaEducativaRepository.save(oferta);
+	    return ofertaEducativaRepository.findById(oferta.getIdoferta_educativa()).orElse(null);
 	}
 
 	public OfertaEducativa deleteOferta(Integer id) {
-		OfertaEducativa ofertaAEliminar = getOferta(id);
-		if (ofertaAEliminar != null) {
-			lista.remove(ofertaAEliminar);
-		}
-		return ofertaAEliminar;
+		OfertaEducativa temp = null;
+		if(ofertaEducativaRepository.existsById(id)) {
+			temp = ofertaEducativaRepository.findById(id).get();
+			ofertaEducativaRepository.deleteById(id);
+		}//if exists
+			return temp;
 	}
 
 	public OfertaEducativa updateOferta(Integer id, String ofed_enlace, Escuela escuela, Carrera carrera) {
-		OfertaEducativa ofertaTemp = null;
-		for(OfertaEducativa oferta : lista) {
-			if (oferta.getIdoferta_educativa() == id) {
-				if (ofed_enlace != null) oferta.setOfed_enlace(ofed_enlace);
-				if (escuela != null) oferta.setEscuela(escuela);
-				if (carrera != null) oferta.setCarrera(carrera);
-				
-				ofertaTemp=oferta;
-				break;
-			}//if=id
-		}//for lista
-		return ofertaTemp;
+		OfertaEducativa temp = null;
+
+		if (ofertaEducativaRepository.existsById(id)) {
+			OfertaEducativa oferta = ofertaEducativaRepository.findById(id).get();
+			if (ofed_enlace != null) oferta.setOfed_enlace(ofed_enlace);
+			if (escuela != null) oferta.setEscuela(escuela);
+			if (carrera != null) oferta.setCarrera(carrera);
+			
+			ofertaEducativaRepository.save(oferta);
+
+			temp = oferta;
+	}
+	return temp;
 	}
 
 

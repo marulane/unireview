@@ -8,6 +8,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.unireview.model.Escuela;
+import org.unireview.model.OfertaEducativa;
 import org.unireview.repository.EscuelaRepository;
 
 @Service
@@ -25,8 +26,8 @@ public class EscuelaService {
 //		lista.add(new Escuela("Enseñanza e Investigación Superior, A.C. (UNIVERSIDAD TECMILENIO)", "Jalisco", "https://www.tecmilenio.mx/es"));
 //
 //	}
-	
-	protected EscuelaService(EscuelaRepository escuelaRepository) {
+	@Autowired
+	public EscuelaService(EscuelaRepository escuelaRepository) {
 		this.escuelaRepository = escuelaRepository;
 	}//constructor
 
@@ -57,7 +58,7 @@ public class EscuelaService {
 	//POST
 	public Escuela addEscuela(Escuela escuela) {
 		Optional<Escuela> esc =
-				escuelaRepository.findByName(escuela.getEsc_nombre());
+				escuelaRepository.findByEscNombre(escuela.getEsc_nombre());
 				if(esc.isEmpty() ) {
 					escuelaRepository.save(escuela);
 
@@ -69,19 +70,18 @@ public class EscuelaService {
 
 	//PUT
 	public Escuela updateEscuela(Integer id, String esc_nombre, String esc_ubicacion, String esc_enlace) {
-        return null;
-//		Escuela escTemp = null;
-//		for(Escuela escuela : lista) {
-//			if(escuela.getIdescuela()==id) {
-//				if(esc_nombre!=null) escuela.setEsc_nombre(esc_nombre);
-//				if(esc_ubicacion!=null) escuela.setesc_ubicacion(esc_ubicacion);
-//				if(esc_enlace!=null) escuela.setEsc_enlace(esc_enlace);
-//				
-//				escTemp = escuela;
-//				break;
-//			}//if id
-//		}//foreach
-//		return escTemp;
+		Escuela temp = null;
+        if (escuelaRepository.existsById(id)) {
+			Escuela escuela = escuelaRepository.findById(id).get();
+			if (esc_nombre != null) escuela.setEsc_nombre(esc_nombre);		
+			if (esc_ubicacion != null) escuela.setesc_ubicacion(esc_ubicacion);
+			if (esc_enlace != null) escuela.setEsc_enlace(esc_enlace);
+			
+			escuelaRepository.save(escuela);
+	
+			temp = escuela;
+        }
+        return temp;
 	}
 
 

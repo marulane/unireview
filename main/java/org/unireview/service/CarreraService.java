@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.unireview.model.Carrera;
 import org.unireview.repository.CarreraRepository;
@@ -13,7 +14,8 @@ public class CarreraService {
 	private final CarreraRepository carreraRepository;
 //	private final List<Carrera> lista = new ArrayList<Carrera>();
 	
-	protected CarreraService(CarreraRepository carreraRepository) {
+	@Autowired
+	public CarreraService(CarreraRepository carreraRepository) {
 		this.carreraRepository = carreraRepository;
 	}
 	
@@ -47,7 +49,7 @@ public class CarreraService {
 
 	public Carrera addCarrera(Carrera carrera) {
 		Optional<Carrera> prod =
-				carreraRepository.findByName(carrera.getCarr_nombre());
+				carreraRepository.findByCarrNombre(carrera.getCarr_nombre());
 				if(prod.isEmpty() ) {
 					carreraRepository.save(carrera);
 

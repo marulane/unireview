@@ -53,17 +53,17 @@ public class PublicacionController {
 	@PutMapping(path="{publiId}")
 	public Publicacion updateProducto(@PathVariable("publiId") Integer id,
 		@RequestParam(required = false) String publi_comentario,
-		@RequestParam(required = false) String publi_fecha,
+		//@RequestParam(required = false) String publi_fecha,
 		@RequestParam(required = false) Integer publi_calificacion,
 		@RequestParam(required = false) String publi_etiqueta,
 		@RequestParam(required = false) String publi_tipo_usuario,
-		@RequestParam(required = false) Usuario usuario,
+		//@RequestParam(required = false) Usuario usuario,
 		@RequestParam(required = false) Escuela escuela,
 		@RequestParam(required = false) Carrera carrera
 		) {
 		return publicacionService.updatePublicacion(
-				id, publi_comentario, publi_fecha, publi_calificacion, 
-				publi_etiqueta, publi_tipo_usuario, usuario, escuela, carrera);
+				id, publi_comentario, publi_calificacion, 
+				publi_etiqueta, publi_tipo_usuario, escuela, carrera);
 	}//updatePublicacion
 	
 }

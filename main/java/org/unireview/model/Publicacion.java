@@ -1,5 +1,7 @@
 package org.unireview.model;
 
+import java.time.LocalDate;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -24,7 +26,7 @@ public class Publicacion {
 	private String publi_comentario;
 	
 	@Column(name="publi_fecha", nullable = false)
-	private String publi_fecha;
+	private LocalDate publi_fecha;
 	
 	@Column(name="publi_calificacion", nullable = false)
 	private Integer publi_calificacion;
@@ -36,23 +38,23 @@ public class Publicacion {
 	private String publi_tipo_usuario;
 	
 	//private static Long total = Long.valueOf(0);
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "idusuario_fk", referencedColumnName = "idusuario")
 	@JsonIgnoreProperties ({"hibernateLazyInitializer", "handler"})
 	private Usuario usuario;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "idescuela_fk", referencedColumnName = "idescuela")
 	@JsonIgnoreProperties ({"hibernateLazyInitializer", "handler"})
 	private Escuela escuela;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "idcarrera_fk", referencedColumnName = "idcarrera")
 	@JsonIgnoreProperties ({"hibernateLazyInitializer", "handler"})
 	private Carrera carrera;
 	
 	//constructor
-	public Publicacion(String publi_comentario, String publi_fecha, int publi_calificacion, String publi_etiqueta,
+	public Publicacion(String publi_comentario, LocalDate publi_fecha, int publi_calificacion, String publi_etiqueta,
 			String publi_tipo_usuario, Usuario usuario, Escuela escuela, Carrera carrera) {
 		super();
 		this.publi_comentario = publi_comentario;
@@ -81,11 +83,11 @@ public class Publicacion {
 		this.publi_comentario = publi_comentario;
 	}
 
-	public String getPubli_fecha() {
+	public LocalDate getPubli_fecha() {
 		return publi_fecha;
 	}
 
-	public void setPubli_fecha(String publi_fecha) {
+	public void setPubli_fecha(LocalDate publi_fecha) {
 		this.publi_fecha = publi_fecha;
 	}
 
