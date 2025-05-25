@@ -23,6 +23,14 @@ public class PublicacionService {
 	public List<Publicacion> getPublicaciones() {
 		return publicacionRepository.findAll();
 	}//getPublicaciones
+	
+	public List<Publicacion> getPublicacionesByEmail(String email) {
+		return publicacionRepository.findByUsuarioEmail(email);
+	}//getPublicaciones
+	
+	public List<Publicacion> selectFourCards() {
+		return publicacionRepository.selectFourCards();
+	}//getFourPublis
 
 	public Publicacion getPublicacion(Integer id) {
 		return publicacionRepository.findById(id).orElseThrow(
@@ -72,5 +80,6 @@ public class PublicacionService {
 		}
 		return temp;
 	}
+
 }
 

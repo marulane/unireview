@@ -3,6 +3,7 @@ package org.unireview.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,6 +19,7 @@ import org.unireview.model.Publicacion;
 import org.unireview.model.Usuario;
 import org.unireview.service.PublicacionService;
 
+@CrossOrigin(origins = "http://127.0.0.1:5501")
 @RestController
 @RequestMapping(path="/unireview/publicaciones/")
 //http://localhost:8080/unireview/publicaciones
@@ -34,6 +36,15 @@ public class PublicacionController {
 	public List<Publicacion> getPublicaciones(){
 		return publicacionService.getPublicaciones();
 	}//getPublicaciones
+	
+	@GetMapping(path="filter/{emailId}")
+	public List<Publicacion> getPublicacionesByEmail(@PathVariable("emailId") String email){
+		return publicacionService.getPublicacionesByEmail(email);
+	}
+	@GetMapping(path="filter/publisDestacadas")
+	public List<Publicacion> getFourPublis(){
+		return publicacionService.selectFourCards();
+	}//selectFourCards
 	
 	@GetMapping(path="{publiId}")
 	public Publicacion getPublicacion(@PathVariable("publiId") Integer id) {
