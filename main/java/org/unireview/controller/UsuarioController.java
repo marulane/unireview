@@ -1,8 +1,10 @@
 package org.unireview.controller;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -52,10 +54,10 @@ public class UsuarioController {
 	public Usuario updateUsuario(@PathVariable("userId") Integer id,
 		@RequestParam(required = false) String usu_nombre,  
 		@RequestParam(required = false) String usu_telefono, 
-		@RequestParam(required = false) String usu_fechaNacimiento, 
+		@RequestParam(required = false)  @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate usu_fechanacimiento, 
 		@RequestParam(required = false) String usu_foto_perfil, ChangePassword changePassword){
 		
-		return usuarioService.updateUsuario(id, usu_nombre, usu_telefono, usu_fechaNacimiento, usu_foto_perfil, changePassword);
+		return usuarioService.updateUsuario(id, usu_nombre, usu_telefono, usu_fechanacimiento, usu_foto_perfil, changePassword);
 		
 		
 	}

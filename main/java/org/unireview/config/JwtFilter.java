@@ -28,17 +28,23 @@ public class JwtFilter extends GenericFilterBean {
 		String authHeader = httpServletRequest.getHeader("Authorization");
 		//Filtrar por método y URL
 		//httpServletRequest.getMethod()-> GET POST PUT DELETE
-		if(	(("POST".equals(httpServletRequest.getMethod())) &&  
-			(! httpServletRequest.getRequestURI().contains("/api/usuarios/")) )
-			|| (("GET".equals(httpServletRequest.getMethod())) && 
-			(! httpServletRequest.getRequestURI().contains("/api/productos/")) ) 
-			|| ("PUT".equals(httpServletRequest.getMethod()))
-			|| ("DELETE".equals(httpServletRequest.getMethod()))
-		  ){
-			if(authHeader==null || !authHeader.startsWith("Bearer: ")) {
-				System.out.println("1. Invalid Token");
-				throw new ServletException("1. Invalid Token");
-			}//if authHeader
+		boolean isPublicGet =
+				httpServletRequest.getMethod().equals("GET") &&
+				(httpServletRequest.getRequestURI().contains("/unireview/publicaciones/") ||
+				 httpServletRequest.getRequestURI().contains("/unireview/carreras/") ||
+				 httpServletRequest.getRequestURI().contains("/unireview/escuelas/") ||
+				 httpServletRequest.getRequestURI().contains("/unireview/ofertas/"));
+
+			boolean isPublicPost =
+				httpServletRequest.getMethod().equals("POST") &&
+				httpServletRequest.getRequestURI().contains("/unireview/usuarios/");
+
+			if (!(isPublicGet || isPublicPost)) {
+				// Verificar el token
+				if (authHeader == null || !authHeader.startsWith("Bearer: ")) {
+					System.out.println("1. Invalid Token");
+					throw new ServletException("1. Invalid Token");
+				}
 			String token = authHeader.substring(7);
 			try {
 				Claims claims = Jwts.parser().setSigningKey(secret)

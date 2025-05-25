@@ -1,9 +1,11 @@
 package org.unireview.service;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.unireview.dto.ChangePassword;
 import org.unireview.model.Usuario;
@@ -12,6 +14,9 @@ import org.unireview.repository.UsuarioRepository;
 @Service
 public class UsuarioService {
 //	private final List<Usuario> lista = new ArrayList<Usuario>();
+	
+	@Autowired
+	private PasswordEncoder encoder;
 	
 	private final UsuarioRepository usuarioRepository;
 	
@@ -51,26 +56,27 @@ public class UsuarioService {
 
 	public Usuario addUsuario(Usuario usuario) {
 		//TEMPORAL HASTA UTILIZAR EL ENCODER
-		Optional<Usuario> user = usuarioRepository.findByUsuName(usuario.getUsu_email());
+		Optional<Usuario> user = usuarioRepository.findByUsuEmail(usuario.getUsu_email());
 		if(user.isEmpty()) {
 			//usuario.setUsu_password(encoder.encode(usuario.getUsu_password()));
+			usuario.setUsu_password(encoder.encode(usuario.getUsu_password()));
 			usuarioRepository.save(usuario);
 		}else {
-			//return null;
-			usuario = user.get();	//regresa el producto que ya existe
+			usuario = null;
+			//user.get();	//regresa el producto que ya existe
 			//producto=null; 	//tambien se puede utilizar este
 		}
 		return usuario;
 	}//addUsuario
 
-	public Usuario updateUsuario(Integer id, String usu_nombre, String usu_telefono, String usu_fechaNacimiento,
+	public Usuario updateUsuario(Integer id, String usu_nombre, String usu_telefono, LocalDate usu_fechanacimiento,
 			String usu_foto_perfil, ChangePassword changePassword) {
 		Usuario tmp = null;
 		if(usuarioRepository.existsById(id)){
 			Usuario usuario = usuarioRepository.findById(id).get();
 			if(usu_nombre != null) usuario.setUsu_nombre(usu_nombre);
 			if(usu_telefono != null) usuario.setUsu_telefono(usu_telefono);
-			if(usu_fechaNacimiento != null) usuario.setUsu_fechaNacimiento(usu_fechaNacimiento);
+			if(usu_fechanacimiento != null) usuario.setUsu_fechaNacimiento(usu_fechanacimiento);
 			if(usu_foto_perfil != null) usuario.setUsu_foto_perfil(usu_foto_perfil);
 			if(usuario.getUsu_password().equals(changePassword.getUsu_password())) usuario.setUsu_password(changePassword.getN_usu_password());
 			usuarioRepository.save(usuario);
@@ -78,6 +84,17 @@ public class UsuarioService {
 		}
 		return tmp;
 	}//UpdateUsuario
+	
+	public boolean validateUser(Usuario usuario) {
+		Optional<Usuario> user = usuarioRepository.findByUsuEmail(usuario.getUsu_email());
+		if(user.isPresent()) {
+			Usuario tmp = user.get();
+			if(encoder.matches(usuario.getUsu_password(), tmp.getUsu_password())) {
+				return true;
+			}//matches
+		}//if isPresent
+		return false;
+	}//ValidateUser
 
 
 

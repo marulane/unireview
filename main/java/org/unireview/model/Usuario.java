@@ -1,5 +1,7 @@
 package org.unireview.model;
 
+import java.time.LocalDate;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -27,8 +29,8 @@ public class Usuario {
 	@Column(name="usu_password", nullable = false)
 	private String usu_password;
 	
-	@Column(name="usu_fechaNacimiento", nullable = false)
-	private String usu_fechaNacimiento;
+	@Column(name="usu_fechanacimiento", nullable = false)
+	private LocalDate usu_fechaNacimiento;
 	
 	@Column(name="usu_foto_perfil")
 	private String usu_foto_perfil;
@@ -37,7 +39,7 @@ public class Usuario {
 	
 	// constructor
 	public Usuario(String usu_nombre, String usu_email, String usu_telefono, String usu_password,
-			String usu_fechaNacimiento, String usu_foto_perfil) {
+			LocalDate usu_fechaNacimiento, String usu_foto_perfil) {
 		super();
 		//Usuario.total++;
 		this.usu_nombre = usu_nombre;
@@ -82,10 +84,10 @@ public class Usuario {
 	public void setUsu_password(String usu_password) {
 		this.usu_password = usu_password;
 	}
-	public String getUsu_fechaNacimiento() {
+	public LocalDate getUsu_fechaNacimiento() {
 		return usu_fechaNacimiento;
 	}
-	public void setUsu_fechaNacimiento(String usu_fechaNacimiento) {
+	public void setUsu_fechaNacimiento(LocalDate usu_fechaNacimiento) {
 		this.usu_fechaNacimiento = usu_fechaNacimiento;
 	}
 	public String getUsu_foto_perfil() {
