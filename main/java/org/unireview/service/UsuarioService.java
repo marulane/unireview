@@ -1,11 +1,11 @@
 package org.unireview.service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.unireview.dto.ChangePassword;
 import org.unireview.model.Usuario;
 import org.unireview.repository.UsuarioRepository;
 
@@ -50,13 +50,36 @@ public class UsuarioService {
 	}//deleteUsuario
 
 	public Usuario addUsuario(Usuario usuario) {
-	//pendiente
-		return null;
+		//TEMPORAL HASTA UTILIZAR EL ENCODER
+		Optional<Usuario> user = usuarioRepository.findByUsuName(usuario.getUsu_email());
+		if(user.isEmpty()) {
+			//usuario.setUsu_password(encoder.encode(usuario.getUsu_password()));
+			usuarioRepository.save(usuario);
+		}else {
+			//return null;
+			usuario = user.get();	//regresa el producto que ya existe
+			//producto=null; 	//tambien se puede utilizar este
+		}
+		return usuario;
 	}//addUsuario
 
-	public Usuario updateUsuario(Integer id, String usu_nombre, String usu_email, String usu_telefono, String usu_password,
-			String usu_fechaNacimiento, String usu_foto_perfil) {
-		return null;
+	public Usuario updateUsuario(Integer id, String usu_nombre, String usu_telefono, String usu_fechaNacimiento,
+			String usu_foto_perfil, ChangePassword changePassword) {
+		Usuario tmp = null;
+		if(usuarioRepository.existsById(id)){
+			Usuario usuario = usuarioRepository.findById(id).get();
+			if(usu_nombre != null) usuario.setUsu_nombre(usu_nombre);
+			if(usu_telefono != null) usuario.setUsu_telefono(usu_telefono);
+			if(usu_fechaNacimiento != null) usuario.setUsu_fechaNacimiento(usu_fechaNacimiento);
+			if(usu_foto_perfil != null) usuario.setUsu_foto_perfil(usu_foto_perfil);
+			if(usuario.getUsu_password().equals(changePassword.getUsu_password())) usuario.setUsu_password(changePassword.getN_usu_password());
+			usuarioRepository.save(usuario);
+			tmp = usuario;
+		}
+		return tmp;
 	}//UpdateUsuario
+
+
+
 
 }//class

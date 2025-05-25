@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.unireview.dto.ChangePassword;
 import org.unireview.model.Usuario;
 import org.unireview.service.UsuarioService;
 
@@ -46,18 +47,20 @@ public class UsuarioController {
 		return usuarioService.addUsuario(usuario);
 	}
 	
+	//Solo cambiamos el nombre, telefono, fecha de nacimiento, foto de perfil y contraseña
 	@PutMapping(path="{userId}")
 	public Usuario updateUsuario(@PathVariable("userId") Integer id,
-		@RequestParam(required = false) String usu_nombre, 
-		@RequestParam(required = false) String usu_email, 
-		@RequestParam(required = false) String usu_telefono,
-		@RequestParam(required = false) String usu_password, 
+		@RequestParam(required = false) String usu_nombre,  
+		@RequestParam(required = false) String usu_telefono, 
 		@RequestParam(required = false) String usu_fechaNacimiento, 
-		@RequestParam(required = false) String usu_foto_perfil) {
+		@RequestParam(required = false) String usu_foto_perfil, ChangePassword changePassword){
 		
-		return usuarioService.updateUsuario(id, usu_nombre, usu_email, usu_telefono, usu_password, usu_fechaNacimiento, usu_foto_perfil);
+		return usuarioService.updateUsuario(id, usu_nombre, usu_telefono, usu_fechaNacimiento, usu_foto_perfil, changePassword);
+		
 		
 	}
+	
+
 	
 	
 	
