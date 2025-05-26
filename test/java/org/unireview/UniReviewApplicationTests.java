@@ -11,6 +11,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 import org.unireview.model.Carrera;
 import org.unireview.model.Escuela;
+import org.unireview.model.OfertaEducativa;
+import org.unireview.repository.CarreraRepository;
+import org.unireview.repository.EscuelaRepository;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status; //status 200 OK
@@ -37,6 +40,12 @@ class UniReviewApplicationTests {
 	private final String token = "Bearer: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXVscmFtaXJlei5nbGV6MDBAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDgyODkxMzksImV4cCI6MTc0ODM3NTUzOX0.JLoSZGt2nX2G_kkRSlFwnwzoa59FERsk8bIV5mppIAU";
 	@Autowired
 	private MockMvc mockMvc;
+	
+	@Autowired
+	private CarreraRepository carreraRepository;
+	@Autowired
+	private EscuelaRepository escuelaRepository;
+	
 	@Test
 	@DisplayName("Prueba para obetener al usuario con ID 1 y corroborar que su correo corresponde al guardado en BD")
 	void pruebaGET()throws Exception {
@@ -190,7 +199,7 @@ class UniReviewApplicationTests {
 	}//prueba PUT carrera
 	
 	@Test
-	//@Disabled("Probado una vez, deshabilitado para subsecuentes ocasiones")
+	@Disabled("Probado una vez, deshabilitado para subsecuentes ocasiones")
 	@DisplayName("Se prueba el POST para egregar una nueva escuela")
 	void pruebaPOSTCarrera() throws Exception {
 		Carrera carr = new Carrera("Lic. Física Nuclear", 0d);
@@ -201,5 +210,55 @@ class UniReviewApplicationTests {
 		.andDo(print())
 		.andExpect(status().isOk())
 		.andExpect(jsonPath("$.carr_nombre", is("Lic. Física Nuclear")));
+	}//prueba POST carrera
+	
+///////////////////////////////Test para ofertas educativa//////////////////////////////////////////////
+	@Test
+	@Disabled("Probado una vez, deshabilitado para subsecuentes ocasiones")
+	@DisplayName("Prueba para obetener la oferta educativa con ID 1 y corroborar que su nombre coincide")
+	void pruebaGETOferta()throws Exception {
+		this.mockMvc.perform(get("/unireview/ofertas/1").header("Authorization", token) ) 
+		.andDo(print())
+		.andExpect(status().isOk())
+		//.andExpect( content().string( containsString("Instituto Tecnológico de Reynosa") ) );
+		.andExpect(jsonPath("$.escuela.esc_nombre", is("Escuela Superior de Educación Física")));
+	}//prueba GET oferta educativa
+	
+	@Test
+	@Disabled("Probado una vez, deshabilitado para subsecuentes ocasiones")
+	@DisplayName("Prueba para borrar la oferta con el ID 6 en base al nombre")
+	void pruebaDELETEOferta()throws Exception {
+		this.mockMvc.perform(delete("/unireview/ofertas/6").header("Authorization", token) ) 
+		.andDo(print())
+		.andExpect(status().isOk())
+		//.andExpect( content().string( containsString("raulramirez.glez00@gmail.com") ) );
+		.andExpect(jsonPath("$.escuela.esc_nombre", is("Instituto Politécnico Nacional")));
+	}//prueba DELETE oferta educativa
+	
+	@Test
+	@Disabled("Probado una vez, deshabilitado para subsecuentes ocasiones")
+	@DisplayName("Prueba para editar propiedades de la oferta educativa con el ID 1")
+	void pruebaPUTOferta()throws Exception {
+		this.mockMvc.perform(put("/unireview/ofertas/1?ofed_enlace=tecmilenio.mx/es/ingenieria-en-mecatronica").header("Authorization", token) ) 
+		.andDo(print())
+		.andExpect(status().isOk())
+		//.andExpect( content().string( containsString("") ) );
+		.andExpect(jsonPath("$.escuela.esc_nombre", is("Escuela Superior de Educación Física")));
+	}//prueba PUT oferta Educativa
+	
+	@Test
+	//@Disabled("Probado una vez, deshabilitado para subsecuentes ocasiones")
+	@DisplayName("Se prueba el POST para egregar una nueva oferta educativa")
+	void pruebaPOSTOferta() throws Exception {
+		Carrera carr = carreraRepository.save(new Carrera("Lic. Arte", 0d));
+		Escuela esc = escuelaRepository.save(new Escuela("Generation", "CDMX, México", "mexico.generation.org"));
+		OfertaEducativa ofed = new OfertaEducativa("https://www.iteso.mx", esc, carr);
+		this.mockMvc.perform(post("/unireview/ofertas/")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(asJsonString(ofed))
+				.header("Authorization", token))
+		.andDo(print())
+		.andExpect(status().isOk())
+		.andExpect(jsonPath("$.carrera.carr_nombre", is("Lic. Arte")));
 	}//prueba POST carrera
 }
