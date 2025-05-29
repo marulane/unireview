@@ -286,7 +286,7 @@ const total = 4; // cantidad de tarjetas
 
   //---------------------------con fetch}
 
-/*   const requestOptions = {
+   const requestOptions = {
   method: "GET",
   redirect: "follow"
   };
@@ -331,46 +331,46 @@ fetch("http://localhost:8080/unireview/publicaciones/filter/publisDestacadas", r
   });
 
   })
-  .catch((error) => console.error(error)); */
+  .catch((error) => console.error(error)); 
 
   //-----------------------------
 
   // Obtener y ordenar los comentarios por calificación
-   const comentarios = JSON.parse(localStorage.getItem("comments") || "[]");
+  //  const comentarios = JSON.parse(localStorage.getItem("comments") || "[]");
 
-  const top4 = comentarios
-    .sort((a, b) => b.stars - a.stars)
-    .slice(0, 4); // solo los 4 primeros
+  // const top4 = comentarios
+  //   .sort((a, b) => b.stars - a.stars)
+  //   .slice(0, 4); // solo los 4 primeros
 
-  top4.forEach(comment => {
-    const starsHTML = Array.from({ length: 5 }, (_, i) => {
-      return `<span class="star ${i < comment.stars ? 'selected' : ''}" data-value="${i + 1}">&#9733;</span>`;
-    }).join("");
+  // top4.forEach(comment => {
+  //   const starsHTML = Array.from({ length: 5 }, (_, i) => {
+  //     return `<span class="star ${i < comment.stars ? 'selected' : ''}" data-value="${i + 1}">&#9733;</span>`;
+  //   }).join("");
 
-    const cardHTML = `
+  //   const cardHTML = `
 
-      <div class="col">
-        <div class="card-section">
-          <div class="card-body">
-            <div class="interactive-rating">
-              ${starsHTML}
-            </div>
-            <h5 class="card-title">${comment.career}</h5>
-            <p class="card-text">${comment.message.length > 150 ? comment.message.substring(0, 150) + '...' : comment.message}</p>
-          </div>
-          <div class="card-footer d-flex align-items-center">
-            <img src="${comment.img}" class="rounded-circle me-2" alt="${comment.username}" width="40" height="40">
-            <div>
-              <small class="text-muted">${comment.username}</small><br>
-              <small class="text-muted">${comment.date}</small>
-            </div>
-          </div>
-        </div>
-      </div>
-    `;
+  //     <div class="col">
+  //       <div class="card-section">
+  //         <div class="card-body">
+  //           <div class="interactive-rating">
+  //             ${starsHTML}
+  //           </div>
+  //           <h5 class="card-title">${comment.career}</h5>
+  //           <p class="card-text">${comment.message.length > 150 ? comment.message.substring(0, 150) + '...' : comment.message}</p>
+  //         </div>
+  //         <div class="card-footer d-flex align-items-center">
+  //           <img src="${comment.img}" class="rounded-circle me-2" alt="${comment.username}" width="40" height="40">
+  //           <div>
+  //             <small class="text-muted">${comment.username}</small><br>
+  //             <small class="text-muted">${comment.date}</small>
+  //           </div>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   `;
 
-    contenedorTop4.insertAdjacentHTML("beforeend", cardHTML);
-  }); 
+  //   contenedorTop4.insertAdjacentHTML("beforeend", cardHTML);
+  // }); 
 }
 document.addEventListener("DOMContentLoaded", () => {
   mostrarTop4Cards();

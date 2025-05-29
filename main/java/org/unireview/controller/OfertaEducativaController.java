@@ -10,6 +10,7 @@ import org.unireview.model.Escuela;
 import org.unireview.model.OfertaEducativa;
 import org.unireview.service.OfertaEducativaService;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping(path = "/unireview/ofertas/") // http://localhost:8080/unireview/ofertas/
 public class OfertaEducativaController {
