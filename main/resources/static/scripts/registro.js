@@ -89,6 +89,35 @@ if (localStorage.getItem("users")) {
       alertValidaciones.style.display="block";
       isValid=false;
     }
+    //Si no se ingresa una fecha de nacimiento
+    if (txtdateOfBirth.value.trim() === "") {
+      alertValidacionesTexto.innerHTML += "<strong>Selecciona tu fecha de nacimiento.</strong><br/>";
+      alertValidaciones.style.display = "block";
+      txtdateOfBirth.style.border = "solid medium red";
+      isValid = false;
+    }
+
+  if(!passwordValidacion.test(txtPass.value)){
+    txtPass.style.border="solid medium red";
+    alertValidacionesTexto.innerHTML +=`<strong>Ingresa una contraseña válida:</strong><br/>
+    <ul style = "text-align : center">
+      <li>Al menos una letra minúscula. [a-z]</li>
+      <li>Al menos una letra mayúscula. [A-Z]</li>
+      <li>Al menos un número. [0-9]</li>
+      <li>Mínimo 8 caracteres.</li>
+    </ul>`;
+    alertValidaciones.style.display="block";
+    isValid=false;
+  }
+
+  if(!(txtPass.value === txtConfirmPass.value) || txtConfirmPass.value=== ""){
+    txtConfirmPass.style.border="solid medium red";
+    alertValidacionesTexto.innerHTML +="<strong>Captura ambas contraseñas, estas deben ser iguales.</strong><br/>";
+    alertValidaciones.style.display="block";
+    isValid=false;
+  }
+
+  if(isValid){
       //Buscando si existe el correo en el localStorage
 
       //Convertimos a un arreglo de objetos json el contenido del localstorage
@@ -103,73 +132,85 @@ if (localStorage.getItem("users")) {
       //Devuelve **true** si al menos un elemento del arreglo cumple la condición.
       //Devuelve **false** si ninguno la cumple.
       const emailExists = allUsers.some(user => user.userEmail.toLowerCase() === emailToCheck);
+      //let encodedImageUrl = encodeURIComponent("https://res.cloudinary.com/dnnna4gud/image/upload/v1747435914/blank-pp_e1sbed.webp");
 
+      //-----------------------------
+      const myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
 
-      if (emailExists) {
-      alertValidacionesTexto.innerHTML += "<strong>Este correo ya está registrado.</strong><br/>";
-      alertValidaciones.style.display = "block";
-      txtEmail.style.border = "solid medium red";
-      isValid = false;
-      }
+      const raw = JSON.stringify({
+        "usu_nombre": txtName.value,
+        "usu_email": txtEmail.value,
+        "usu_telefono": txtTel.value,
+        "usu_password": txtPass.value,
+        "usu_fechaNacimiento": txtdateOfBirth.value,
+        "usu_foto_perfil": "https://res.cloudinary.com/dnnna4gud/image/upload/v1747435914/blank-pp_e1sbed.webp"
+      });
 
-        //Si no se ingresa una fecha de nacimiento
-      if (txtdateOfBirth.value.trim() === "") {
-        alertValidacionesTexto.innerHTML += "<strong>Selecciona tu fecha de nacimiento.</strong><br/>";
-        alertValidaciones.style.display = "block";
-        txtdateOfBirth.style.border = "solid medium red";
-        isValid = false;
-      }
+      const requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow"
+      };
 
-    if(!passwordValidacion.test(txtPass.value)){
-      txtPass.style.border="solid medium red";
-      alertValidacionesTexto.innerHTML +=`<strong>Ingresa una contraseña válida:</strong><br/>
-      <ul style = "text-align : center">
-        <li>Al menos una letra minúscula. [a-z]</li>
-        <li>Al menos una letra mayúscula. [A-Z]</li>
-        <li>Al menos un número. [0-9]</li>
-        <li>Mínimo 8 caracteres.</li>
-      </ul>`;
-      alertValidaciones.style.display="block";
-      isValid=false;
-    }
+      fetch("/unireview/usuarios/", requestOptions)
+        .then((response) => response.text())
+        .then((resultt) => {
+          //console.log(resultt);
+          let result;
+         
 
-    if(!(txtPass.value === txtConfirmPass.value) || txtConfirmPass.value=== ""){
-      txtConfirmPass.style.border="solid medium red";
-      alertValidacionesTexto.innerHTML +="<strong>Captura ambas contraseñas, estas deben ser iguales.</strong><br/>";
-      alertValidaciones.style.display="block";
-      isValid=false;
-    }
-
-
-    //Se paso currentUser a la pagina de inicio de sesion
-    if(isValid){
-         let currentUser = {
-             "userName" : txtName.value,
-             "userTel" : txtTel.value,
-             "userEmail" : txtEmail.value,
-             "userdateOfBirth" : txtdateOfBirth.value,
-             "userPass" : txtPass.value,
-             "userPP" : './assets/profile-pictures/blank-pp.webp'
+          if (resultt === null || resultt == "") {
+          alertValidacionesTexto.innerHTML += "<strong>Este correo ya está registrado.</strong><br/>";
+          alertValidaciones.style.display = "block";
+          txtEmail.style.border = "solid medium red";
+          isValid = false;
+          }else{
+            result = JSON.parse(resultt);
+            Swal.fire({
+                  title: "¡Ya estás registrado!",
+                  text: "Ir a Inicio de Sesión",
+                  imageUrl: "../assets/love.svg",
+                  imageWidth: 300,
+                  imageHeight: 190,
+                  confirmButtonColor: "#EB5A3C"
+                }).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.href = "./inicio-sesion.html"; 
+                }
+              });;
           }
 
-        allUsers.unshift(currentUser);
-        localStorage.setItem("users", JSON.stringify(allUsers));
-        // localStorage.setItem("currentUser", JSON.stringify(currentUser));
+          
 
-        //SwetAlert2 
-         Swal.fire({
-               title: "¡Ya estás registrado!",
-               text: "Ir a Inicio de Sesión",
-               imageUrl: "../assets/love.svg",
-               imageWidth: 300,
-               imageHeight: 190,
-               confirmButtonColor: "#EB5A3C"
-             }).then((result) => {
-            if (result.isConfirmed) {
-              window.location.href = "./inicio-sesion.html"; 
-            }
-          });;
-    };
+          
+
+
+        //Se paso currentUser a la pagina de inicio de sesion
+        
+            // let currentUser = {
+            //     "userName" : txtName.value,
+            //     "userTel" : txtTel.value,
+            //     "userEmail" : txtEmail.value,
+            //     "userdateOfBirth" : txtdateOfBirth.value,
+            //     "userPass" : txtPass.value,
+            //     "userPP" : './assets/profile-pictures/blank-pp.webp'
+            //   }
+
+            // allUsers.unshift(currentUser);
+            //localStorage.setItem("users", JSON.stringify(allUsers));
+            // localStorage.setItem("currentUser", JSON.stringify(currentUser));
+
+            //SwetAlert2 
+            
+        
+        })
+        .catch((error) => console.error(error));
+      //-----------------------------
+    }
+
+
 
   });//btnRegister
 

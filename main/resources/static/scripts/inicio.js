@@ -122,12 +122,12 @@ let allComments = [
 }];// Array allComments
 
 //Almacenando comentarios en el localStorage como cadena de texto
-if (!localStorage.getItem("comments")) {
+/* if (!localStorage.getItem("comments")) {
   localStorage.setItem("comments", JSON.stringify(allComments));
-}
+} */
 
-
-//Cargando las carreras de carreras.json
+let inicioCarreras;
+//Cargando las carreras 
   $(document).ready(function () {
     const careerSelect = $('#careerSelect');
      // ----------------------------
@@ -136,10 +136,11 @@ if (!localStorage.getItem("comments")) {
       redirect: "follow"
     };
 
-    fetch("http://localhost:8080/unireview/carreras/", requestOptions)
+    fetch("/unireview/carreras/", requestOptions)
       .then((response) => response.text())
       .then((result) => {
         const data = JSON.parse(result);
+        inicioCarreras = data;
         //console.log(data);
           careerSelect.empty();
           careerSelect.append('<option value="" selected disabled>Selecciona tu carrera</option>');
@@ -291,7 +292,7 @@ const total = 4; // cantidad de tarjetas
   redirect: "follow"
   };
 
-fetch("http://localhost:8080/unireview/publicaciones/filter/publisDestacadas", requestOptions)
+fetch("/unireview/publicaciones/filter/publisDestacadas", requestOptions)
   .then((response) => response.text())
   .then((result) => { 
     const comentarios = JSON.parse(result);
@@ -399,10 +400,22 @@ document.getElementById("btnBuscar").addEventListener("click", function (e) {
     return;
   }
 
-  const comentarios = JSON.parse(localStorage.getItem("comments") || "[]");
+  let comentarios;
+  //-------------------------
+  const requestOptions = {
+  method: "GET",
+  redirect: "follow"
+};
 
-  const comentariosCarrera = comentarios.filter(c =>
-    c.career.trim().toLowerCase() === nombreCarrera.trim().toLowerCase()
+fetch("/unireview/publicaciones/", requestOptions)
+  .then((response) => response.text())
+  .then((result) => {
+    //console.log(result);
+    if(result!= ""){
+      comentarios = JSON.parse(result);
+    }
+    const comentariosCarrera = comentarios.filter(c =>
+    c.carrera.carr_nombre.trim().toLowerCase() === nombreCarrera.trim().toLowerCase()
   );
 
   const cantidad = comentariosCarrera.length;
@@ -419,7 +432,7 @@ document.getElementById("btnBuscar").addEventListener("click", function (e) {
     return;
   }
 
-  const suma = comentariosCarrera.reduce((acc, curr) => acc + curr.stars, 0);
+  const suma = comentariosCarrera.reduce((acc, curr) => acc + curr.publi_calificacion, 0);
   const promedio = (suma / cantidad).toFixed(1);
 
   cargarModalCarrera(() => {
@@ -431,6 +444,11 @@ document.getElementById("btnBuscar").addEventListener("click", function (e) {
       });
     }, 100);
   });
+  })
+  .catch((error) => console.error(error));
+  //-------------------------
+
+  
 });
 
 

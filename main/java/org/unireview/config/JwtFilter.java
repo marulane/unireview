@@ -26,6 +26,9 @@ public class JwtFilter extends GenericFilterBean {
 		HttpServletRequest httpServletRequest = (HttpServletRequest) request;
 		//Header Authorization
 		String authHeader = httpServletRequest.getHeader("Authorization");
+		System.out.println(httpServletRequest.getHeaderNames());
+		System.out.println("Auth header: "+authHeader);
+		
 		//Filtrar por método y URL
 		//httpServletRequest.getMethod()-> GET POST PUT DELETE
 		boolean isPublicGet =
@@ -36,11 +39,18 @@ public class JwtFilter extends GenericFilterBean {
 				 httpServletRequest.getRequestURI().contains("/unireview/ofertas/"));
 
 			boolean isPublicPost =
-				httpServletRequest.getMethod().equals("POST") &&
+				(httpServletRequest.getMethod().equals("POST") || httpServletRequest.getMethod().equals("OPTIONS") ) &&
 				httpServletRequest.getRequestURI().contains("/unireview/usuarios/");
+			
+			System.out.println(httpServletRequest.getRequestURI());
+			System.out.println(httpServletRequest.getMethod());
+			
+			System.out.println(" es " + isPublicGet + " o " + isPublicPost);
 
-			if (!(isPublicGet || isPublicPost)) {
+			if (!(isPublicGet || isPublicPost) && !httpServletRequest.getMethod().equals("OPTIONS")) {
 				// Verificar el token
+				System.out.println("authHeader = " + authHeader);
+				
 				if (authHeader == null || !authHeader.startsWith("Bearer: ")) {
 					System.out.println("1. Invalid Token");
 					throw new ServletException("1. Invalid Token");

@@ -96,7 +96,14 @@ public class UsuarioService {
 		return false;
 	}//ValidateUser
 
-
+	public Usuario getUsuarioByLoginUser(Usuario usuario) {
+		Optional<Usuario> temp =null;
+		temp = usuarioRepository.findByUsuEmail(usuario.getUsu_email());
+		if(temp.isPresent()) {
+			return temp.get();
+		}
+		return null;
+	} 
 
 
 }//class

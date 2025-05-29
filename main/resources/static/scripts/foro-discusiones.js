@@ -117,7 +117,7 @@ function highlightStars(stars, rating) {
 }
 
 //Array de todos los comentarios, iniciando por los 10 predefinidos
-let allComments = [
+/* let allComments = [
   //Objeto 1
 {
   'username': 'Itzel.Annet',
@@ -237,12 +237,13 @@ let allComments = [
   'message': 'La carrera es buena, hay profesores preparados. Es recomendable que tengas carrera técnica en algo similar a sistemas o aprender lo básico antes para que no te sientas desorientado al inicio. La carrera se siente pesada, son 9 semestres, pero vale la pena. Te puedes titular con un proyecto.',
   'tags' : 'Dificultad, Profesores, Tips/Consejos',
   'date': '2025-01-28'
-}];// Array allComments
+}];// Array allComments */
+let allComments;// Array allComments vacío
 
 //Almacenando comentarios en el localStorage como cadena de texto
-if (!localStorage.getItem("comments")) {
-  localStorage.setItem("comments", JSON.stringify(allComments));
-}
+// if (!localStorage.getItem("comments")) {
+//   localStorage.setItem("comments", JSON.stringify(allComments));
+// }
 
 //Mostrando localstorage en la página al cargarla
 window.addEventListener("load", function(event){
@@ -250,13 +251,59 @@ window.addEventListener("load", function(event){
 
   //si hay datos en local storage, asignalos al arreglo inicial
   if(this.localStorage.getItem("comments")!=null){
-    allComments = JSON.parse(this.localStorage.getItem("comments"));
+    //allComments = JSON.parse(this.localStorage.getItem("comments"));
   }
     
-  //Ciclo for para recorrer e imprimir el array "allComments" usando la funcion renderComment
-  for (let j = 0; j < allComments.length; j++) {
-    renderComment(allComments[j]);
-  }
+//-------------------------------------------------
+const requestOptions = {
+  method: "GET",
+  redirect: "follow"
+};
+
+fetch("/unireview/publicaciones/", requestOptions)
+  .then((response) => response.text())
+  .then((result) => {
+    //console.log(result);
+    if(result!= ""){
+      let results = JSON.parse(result).reverse();
+      const carreraBuscada = localStorage.getItem("carreraBuscada")?.toLowerCase();
+      
+      allComments= results;
+      mostrarTopCarreras();
+      //--------
+      
+      
+
+
+
+      let comentariosFiltrados = allComments;
+
+      if (carreraBuscada) {
+        comentariosFiltrados = allComments.filter(comment =>
+          comment.carrera.carr_nombre.toLowerCase().includes(carreraBuscada)
+        );
+        for (let j = 0; j < comentariosFiltrados.length; j++) {
+          renderComment(comentariosFiltrados[j]);
+        }
+      }else{
+        //Ciclo for para recorrer e imprimir el array "allComments" usando la funcion renderComment
+        for (let j = 0; j < results.length; j++) {
+          renderComment(results[j]);
+        }
+      }
+
+      
+
+      // Opcional: limpiar carrera buscada después de mostrar
+      //localStorage.removeItem("carreraBuscada");
+      //-------
+    }
+    
+  })
+  .catch((error) => console.error(error));
+//-------------------------------------------------
+  
+ 
  
 
 });//Window load
@@ -264,13 +311,14 @@ window.addEventListener("load", function(event){
 //RENDER COMMENT FUNCTION
 function renderComment(comment,positionIndicator=0) {//positionIndicator, si es 0 se toma como beforend, si es 1 se toma como afterbegirn
   // Al renderizar las estrellas (convertir rating a número):
-  const rating = parseInt(comment.stars) || 0;
+  //console.log(comment);
+  const rating = parseInt(comment.publi_calificacion) || 0;
   let starsHTML = '';
   for (let i = 1; i <= 5; i++) {
     starsHTML += `<span class="star ${i <= rating ? 'selected' : ''}" data-value="${i}">&#9733;</span>`;
   }
 
-  const etiquetasConHash = (comment.tags || '')
+  const etiquetasConHash = (comment.publi_etiqueta || '')
   .split(',')
   .map(etiqueta => `#${etiqueta.trim()}`)
   .join(' ');
@@ -283,20 +331,20 @@ if(positionIndicator==1){
     <div class="card mb-3 comentario-card tarjeta-resena">
       <div class="card-body comentario-contenido d-flex flex-column flex-md-row justify-content-between">
         <div class="d-flex flex-column flex-md-row">
-          <img src="${comment.img}" class="rounded-circle mb-2 mb-md-0 me-md-3 perfil-comentario-img" alt="Foto de usuario" width="60" height="60" style="object-fit: cover;">
+          <img src="${comment.usuario.usu_foto_perfil}" class="rounded-circle mb-2 mb-md-0 me-md-3 perfil-comentario-img" alt="Foto de usuario" width="60" height="60" style="object-fit: cover;">
           <div>
             <div class="d-flex align-items-center gap-2 mb-2">
-              <h4 class="card-title mb-0" style="line-height: 1;">${comment.username} </h4>
-              <p class="text-muted mb-0" style="line-height: 1;"> — ${comment.userType}</p>
+              <h4 class="card-title mb-0" style="line-height: 1;">${comment.usuario.usu_nombre} </h4>
+              <p class="text-muted mb-0" style="line-height: 1;"> — ${comment.publi_tipo_usuario}</p>
             </div>
-            <h6 class="card-subtitle mb-2 text-muted">${comment.career} / ${comment.school}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">${comment.carrera.carr_nombre} / ${comment.escuela.esc_nombre}</h6>
             <div class="d-flex align-items-center mb-2">
-              <h6 class="card-subtitle text-muted mb-0 me-2">${comment.date}</h6>
+              <h6 class="card-subtitle text-muted mb-0 me-2">${comment.publi_fecha}</h6>
               <div class="rating d-flex static-rating">
                 ${starsHTML}
               </div>
             </div>
-            <p class="card-text mb-0">${comment.message}</p>
+            <p class="card-text mb-0">${comment.publi_comentario}</p>
             <div class="mt-2">
              <span style="color: #fd6b4d">${etiquetasConHash}</span>
             </div>
@@ -458,59 +506,101 @@ btnPublicar.addEventListener("click", function(event){
                         "date": isoDate
                     };
     //Agregando el objeto al inicio del array
-    allComments.unshift(elemento);
+    //allComments.unshift(elemento);
     //Recargando el array actualizado al local storage
-    localStorage.setItem("comments", JSON.stringify(allComments));
+    //localStorage.setItem("comments", JSON.stringify(allComments));
+    //----------------------------------------------------------------
+    const myHeaders = new Headers();
+    myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("accessToken").replace(/"/g, '')}`);
+    myHeaders.append("Content-Type", "application/json");
 
-    //console.log(elemento);
-    // Renderiza el nuevo comentario
-    renderComment(elemento,1);
+    const raw = JSON.stringify({
+      "publi_comentario": elemento.message,
+      "publi_fecha": elemento.date,
+      "publi_calificacion": elemento.stars,
+      "publi_etiqueta": elemento.tags,
+      "publi_tipo_usuario": elemento.userType,
+      "usuario": {
+        "idusuario": JSON.parse(localStorage.getItem("currentUser")).idusuario,
+        "usu_foto_perfil": currentUser.userPP,
+        "usu_nombre": elemento.username,
+      },
+      "escuela": {
+        "idescuela": elemento.school,
+        "esc_nombre":schoolSelect.options[schoolSelect.selectedIndex].text,
 
-    //Alerta -> Se subio publicacion 
-    Swal.fire({
-      title: "¡Bien!",
-      text: "Tu opinión ha sido publicada",
-      imageUrl: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2tpdnZ5NXZ6dGF5dzFka296emk2OGd3ZDZrM3NmYmdhbW94NTVnayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/10uJ0IFxlCA06I/giphy.gif",
-      imageWidth: 240,
-      imageHeight: 168,
-      imageAlt: "Custom image",
-      confirmButtonColor: "#EB5A3C"
-    }).then(() => {
-        listComments.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+      },
+      "carrera": {
+        "idcarrera": elemento.career,
+        "carr_nombre":careerSelect.options[careerSelect.selectedIndex].text,
+      }
     });
 
-    //Limpia los campos después de agregarlos a la tabla
-    //txtUser.value="";
-    //Elimina visualmente los valores
-    $('#schoolSelect').selectpicker('val', '');
-    $('#careerSelect').selectpicker('val', '');
-    txtComment.value="";
-    charCounter.innerText = `${txtComment.value.trim().length}/830`;
-    ratingValue.textContent = `Tu calificación: 0`;
+    const requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow"
+    };
 
-    // Elimina clase 'selected' de todas las estrellas
-    interactiveStars.forEach(star => {
-    star.classList.remove("selected");
-    star.style.color = ""; // Limpia estilos inline si los hay
-    });
-    //Actualiza el top carreras tomando en cuenta al último comentario
-    mostrarTopCarreras();
-}
+    fetch("/unireview/publicaciones/", requestOptions)
+      .then((response) => response.text())
+      .then((result) => {
+        //console.log(result);
+        //console.log(elemento);
+        // Renderiza el nuevo comentario
+        console.log(raw);
+        renderComment(JSON.parse(raw),1);
 
+        //Alerta -> Se subio publicacion 
+        Swal.fire({
+          title: "¡Bien!",
+          text: "Tu opinión ha sido publicada",
+          imageUrl: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2tpdnZ5NXZ6dGF5dzFka296emk2OGd3ZDZrM3NmYmdhbW94NTVnayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/10uJ0IFxlCA06I/giphy.gif",
+          imageWidth: 240,
+          imageHeight: 168,
+          imageAlt: "Custom image",
+          confirmButtonColor: "#EB5A3C"
+        }).then(() => {
+            listComments.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+        });
+
+        //Limpia los campos después de agregarlos a la tabla
+        //txtUser.value="";
+        //Elimina visualmente los valores
+        $('#schoolSelect').selectpicker('val', '');
+        $('#careerSelect').selectpicker('val', '');
+        txtComment.value="";
+        charCounter.innerText = `${txtComment.value.trim().length}/830`;
+        ratingValue.textContent = `Tu calificación: 0`;
+
+        // Elimina clase 'selected' de todas las estrellas
+        interactiveStars.forEach(star => {
+        star.classList.remove("selected");
+        star.style.color = ""; // Limpia estilos inline si los hay
+        });
+        //Actualiza el top carreras tomando en cuenta al último comentario
+        mostrarTopCarreras();
+      })
+      .catch((error) => console.error(error));
+    //----------------------------------------------------------------
+  }
 });
 
 function mostrarTopCarreras() {
   // Leer comentarios directamente del localStorage
-  const comentariosGuardados = JSON.parse(localStorage.getItem("comments") || "[]");
+  const comentariosGuardados = allComments;
+  //console.log(allComments);
   // Ordenar por estrellas de mayor a menor
-  const ordenadas = [...comentariosGuardados].sort((a, b) => b.stars - a.stars);
-
+  const ordenadas = [...comentariosGuardados].sort((a, b) => b.publi_calificacion - a.publi_calificacion);
+  //console.log(ordenadas);
   //  Se crea un Set para evitar repetir carreras con el mismo nombre
   const carrerasUnicas = new Set();
   const topCarreras = [];
 
   for (let carrera of ordenadas) {
-    const nombre = carrera.career.trim();
+    console.log(carrera);
+    const nombre = carrera.carrera.carr_nombre.trim();
     if (!carrerasUnicas.has(nombre)) {
       carrerasUnicas.add(nombre);
       topCarreras.push(nombre);
@@ -528,12 +618,12 @@ function mostrarTopCarreras() {
   //Calculando promedio de carreras y mostrándolo en orden ascendente
 topCarreras.forEach((carrera) => {
   const comentariosCarrera = comentariosGuardados.filter(
-    c => c.career.trim() === carrera
+    c => c.carrera.carr_nombre.trim() === carrera
   );
 
   const cantidad = comentariosCarrera.length;
   const promedio = (
-    comentariosCarrera.reduce((acc, curr) => acc + curr.stars, 0) / cantidad
+    comentariosCarrera.reduce((acc, curr) => acc + curr.publi_calificacion, 0) / cantidad
   ).toFixed(1);
 
   resumenCarreras[carrera] = {
@@ -574,33 +664,12 @@ topCarreras.forEach((carrera) => {
 
 }
 
-document.addEventListener("DOMContentLoaded", mostrarTopCarreras);
+//document.addEventListener("DOMContentLoaded", );
 
 
-window.addEventListener("load", function(event){
-  event.preventDefault();
-
-  const carreraBuscada = localStorage.getItem("carreraBuscada")?.toLowerCase();
-
-  if (localStorage.getItem("comments") != null) {
-    allComments = JSON.parse(localStorage.getItem("comments"));
-  }
-
-  let comentariosFiltrados = allComments;
-
-  if (carreraBuscada) {
-    comentariosFiltrados = allComments.filter(comment =>
-      comment.career.toLowerCase().includes(carreraBuscada)
-    );
-  }
-
-  for (let j = 0; j < comentariosFiltrados.length; j++) {
-    renderComment(comentariosFiltrados[j]);
-  }
-
-  // Opcional: limpiar carrera buscada después de mostrar
-  localStorage.removeItem("carreraBuscada");
-});
+/* window.addEventListener("load", function(event){
+  
+}); */
 
 
 function mostrarComentariosFiltrados() {

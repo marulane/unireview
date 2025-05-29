@@ -3,34 +3,54 @@
   $(document).ready(function () {
     const select = $('#schoolSelect');
 
-    if (select.data('loaded')) return; // evitar ejecución doble
+    const requestOptions = {
+    method: "GET",
+    redirect: "follow"
+  };
 
-    $.getJSON('instituciones_anuies.json', function (data) {
-      //console.log("Universidades cargadas:", data.length);
+  fetch("/unireview/escuelas/", requestOptions)
+    .then((response) => response.text())
+    .then((result) => {
+      //console.log(result)
+      const data = JSON.parse(result);
+        if (select.data('loaded')) return; // evitar ejecución doble
 
-      select.empty(); // elimina todas las opciones
-      select.append('<option value="" selected disabled>Selecciona tu universidad</option>'); // reinsertar la opción inicial
+       // $.getJSON('instituciones_anuies.json', function (data) {
+          //console.log("Universidades cargadas:", data.length);
 
-      const nombresAgregados = new Set(); // para evitar duplicados
-      data.sort((a, b) => a.nombre.localeCompare(b.nombre, 'es', { sensitivity: 'base' }));
-      data.forEach(item => {
-        if (!nombresAgregados.has(item.nombre)) {
-          select.append(new Option(item.nombre, item.nombre));
-          nombresAgregados.add(item.nombre);
-        }
-      });
+          select.empty(); // elimina todas las opciones
+          select.append('<option value="" selected disabled>Selecciona tu universidad</option>'); // reinsertar la opción inicial
 
-      select.selectpicker('destroy');
-      select.selectpicker();
-      select.data('loaded', true); // marca como cargado
-    });
+          const nombresAgregados = new Set(); // para evitar duplicados
+          data.sort((a, b) => a.esc_nombre.localeCompare(b.esc_nombre, 'es', { sensitivity: 'base' }));
+          data.forEach(item => {
+            if (!nombresAgregados.has(item.esc_nombre)) {
+              select.append(new Option(item.esc_nombre, item.idescuela));
+              nombresAgregados.add(item.esc_nombre);
+            }
+          });
+
+          select.selectpicker('destroy');
+          select.selectpicker();
+          select.data('loaded', true); // marca como cargado
+  })
+    .catch((error) => console.error(error));
   });
 
 //Cargando las carreras de carreras.json
   $(document).ready(function () {
     const careerSelect = $('#careerSelect');
 
-    $.getJSON('carreras.json', function (data) {
+    const requestOptions = {
+    method: "GET",
+    redirect: "follow"
+  };
+
+  fetch("/unireview/carreras/", requestOptions)
+    .then((response) => response.text())
+    .then((result) => {
+      const data = JSON.parse(result);
+            //console.log(result)
       careerSelect.empty();
       careerSelect.append('<option value="" selected disabled>Selecciona tu carrera</option>');
 
@@ -38,26 +58,38 @@
 
       // Ordenar por nombre de carrera
       data
-        .filter(item => item.nombre_carrera) // ignorar entradas vacías
-        .sort((a, b) => a.nombre_carrera.localeCompare(b.nombre_carrera, 'es', { sensitivity: 'base' }))
+        .filter(item => item.carr_nombre) // ignorar entradas vacías
+        .sort((a, b) => a.carr_nombre.localeCompare(b.carr_nombre, 'es', { sensitivity: 'base' }))
         .forEach(item => {
-          if (!carrerasAgregadas.has(item.nombre_carrera)) {
-            careerSelect.append(new Option(item.nombre_carrera, item.nombre_carrera));
-            carrerasAgregadas.add(item.nombre_carrera);
+          if (!carrerasAgregadas.has(item.carr_nombre)) {
+            careerSelect.append(new Option(item.carr_nombre, item.idcarrera));
+            carrerasAgregadas.add(item.carr_nombre);
           }
         });
 
       careerSelect.selectpicker('destroy');
       careerSelect.selectpicker();
-    });
+  })
+    .catch((error) => console.error(error));
   });
 
 //Cargar filtros de búsqueda desde localStorage
 function cargarFiltrosDesdeLocalStorage() {
 //Cargando los datos del localStorage
-  const data = JSON.parse(localStorage.getItem("comments") || "[]");
+  //const data = JSON.parse(localStorage.getItem("comments") || "[]");
 
-  //Creando sets para que los valores no se repitan
+  const requestOptions = {
+  method: "GET",
+  redirect: "follow"
+};
+
+fetch("/unireview/publicaciones/", requestOptions)
+  .then((response) => response.text())
+  .then((result) => {
+    
+    const data = JSON.parse(result)
+    //console.log(result)
+    //Creando sets para que los valores no se repitan
   const careersOptions = new Set();
   const schoolsOptions = new Set();
   const orderOptions = new Set();
@@ -65,11 +97,11 @@ function cargarFiltrosDesdeLocalStorage() {
   
 
   data.forEach(comment => {
-    //Agregando a los sets el valor obtenido de localstorage si existe
-    if (comment.career) careersOptions.add(comment.career.trim());
-    if (comment.school) schoolsOptions.add(comment.school.trim());
-    if (comment.stars) starsOptions.add(comment.stars);
-    if (comment.orderOptions) orderOptions.add(comment.date);
+    //Agregando a los sets el valor obtenido  si existe
+    if (comment.carrera.carr_nombre) careersOptions.add(comment.carrera.carr_nombre.trim());
+    if (comment.escuela.esc_nombre) schoolsOptions.add(comment.escuela.esc_nombre.trim());
+    if (comment.publi_calificacion) starsOptions.add(comment.publi_calificacion);
+    if (comment.publi_fecha) orderOptions.add(comment.publi_fecha);
   });
 
   const careerFilter = document.getElementById("careerFilter");
@@ -115,6 +147,10 @@ function cargarFiltrosDesdeLocalStorage() {
     .forEach(r => {
       ratingFilter.insertAdjacentHTML("beforeend", `<option value="${r}">${r} estrellas</option>`);
     });
+  })
+  .catch((error) => console.error(error));
+
+  
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -130,6 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
 //const listComments= document.getElementById("list-comments"); //Contenedor para comentarios
 
 function aplicarFiltros() {
+  console.log(allComments);
   const careerValue = document.getElementById("careerFilter").value;
   const schoolValue = document.getElementById("schoolFilter").value;
   const orderValue = document.getElementById("orderFilter").value;
@@ -141,17 +178,17 @@ function aplicarFiltros() {
 //Accediendo al arreglo allComents el cual es global mientras no esté definido dentro de una función
 //está definido en foro-discusion.js y contiene el contenido del local storage en notación JSON
   const comentariosFiltrados = allComments.filter(comment => {
-    return (careerValue === "default" || comment.career === careerValue) &&
-           (schoolValue === "default" || comment.school === schoolValue) &&
-           (ratingValue === "default" || comment.stars == ratingValue);
+    return (careerValue === "default" || comment.carrera.carr_nombre === careerValue) &&
+           (schoolValue === "default" || comment.escuela.esc_nombre === schoolValue) &&
+           (ratingValue === "default" || comment.publi_calificacion == ratingValue);
   });
 
   
      // Ordenar por fecha si se eligió ascendente o descendente
     if (orderValue === "asc") {
-        comentariosFiltrados.sort((a, b) => new Date(a.date) - new Date(b.date));
+        comentariosFiltrados.sort((a, b) => new Date(a.publi_fecha) - new Date(b.publi_fecha));
     }else if (orderValue === "desc") {
-        comentariosFiltrados.sort((a, b) => new Date(b.date) - new Date(a.date));
+        comentariosFiltrados.sort((a, b) => new Date(b.publi_fecha) - new Date(a.publi_fecha));
     }
 
   // Renderiza los comentarios que sí coinciden
