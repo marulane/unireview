@@ -1,0 +1,17 @@
+.bg-naranja {
+  background-color: #EB5A3C;
+}
+.bg-naranja, .bg-naranja h5 {
+  color: white;
+}
+
+.enlace-carrera {
+  color: #00A5CF;
+  text-decoration: none;
+}
+
+.enlace-carrera:hover {
+  color: #006e92; /* un tono más oscuro al pasar el cursor */
+  text-decoration: underline;
+}
+

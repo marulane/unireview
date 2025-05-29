@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nosotros | UniReview </title>
+
+  <link rel="stylesheet" href="./styles/styles.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+ <!--Fonts (google)-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+  <!--AOS-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Importación de íconos de Bootstrap con CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body style="background-color: #F6F4F0;">
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+ <!--Inicia seccion de carrusel-->
+<div class="container-fluid " style="background-color: #EB5A3C; margin-bottom: 50px; padding-top: 20px;">
+  <h1 class="text-center mb-4" style="margin-top: 50px; color: #F6F4F0;">Reviewers</h1>
+  <div style="width: 60px; height: 3px; background-color: #09122C; margin: 0 auto 30px;"></div>
+
+  <!-- Carrusel con Glider -->
+  <swiper-container
+    class="mySwiper"
+    slides-per-view="1"
+    space-between="20"
+    navigation="true"
+    loop="true"
+    breakpoints='{
+      "640": { "slidesPerView": 1 },
+      "768": { "slidesPerView": 3 },
+      "1024": { "slidesPerView": 4 }
+    }'
+  >
+    <!-- Slides -->
+    <swiper-slide>
+      <img src="./assets/Nosotros/mari.png" class="avatar" alt="Persona 1" onclick="mostrarInfo(0)">
+    </swiper-slide>
+    <swiper-slide>
+      <img src="assets/Nosotros/sam.png" class="avatar" alt="Persona 2" onclick="mostrarInfo(1)">
+    </swiper-slide>
+    <swiper-slide>
+      <img src="./assets/Nosotros/ra.png" class="avatar" alt="Persona 3" onclick="mostrarInfo(2)">
+    </swiper-slide>
+    <swiper-slide>
+      <img src="./assets/Nosotros/keny.png" class="avatar" alt="Persona 4" onclick="mostrarInfo(3)">
+    </swiper-slide>
+    <swiper-slide>
+      <img src="./assets/Nosotros/itz.png" class="avatar" alt="Persona 5" onclick="mostrarInfo(4)">
+    </swiper-slide>
+    <swiper-slide>
+      <img src="./assets/Nosotros/dieg.png" class="avatar" alt="Persona 6" onclick="mostrarInfo(5)">
+    </swiper-slide>
+    <swiper-slide>
+      <img src="./assets/Nosotros/josh.png" class="avatar" alt="Persona 7" onclick="mostrarInfo(6)">
+    </swiper-slide>
+  </swiper-container>
+
+  <!-- Card con info -->
+  <div class="row mt-4 justify-content-center">
+    <div class="col-md-6" style="margin-bottom: 20px;">
+      <div id="infoCard" class="profile-card text-center p-4 shadow d-none" style="margin-bottom: 50px; background-color: #F6F4F0;">
+        <h3 id="name">Nombre</h3>
+        <p id="role" class="text-muted">Rol</p>
+        <p id="bio">Biografía del miembro</p>
+        <a id="linkedin" href="#" target="_blank" class="boton-social"> <i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a id="github" href="#" target="_blank" class="boton-social"> <i class="fab fa-github"></i> GitHub</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!----------------------------Sobre (unireview)----------------------->
+<div class="container mb-5">
+  <h1 class="card-title text-center" style="margin-top: 30px; margin-bottom: 20px;">Conócenos</h1>
+       <div style="width: 60px; height: 3px; background-color: #EB5A3C; margin: 0 auto 30px;"></div>
+  <div class="row align-items-center">
+    <!-- Sección: Sobre UniReview -->
+      
+    <div class="col-md-6 mt-5 mb-4" data-aos="fade-up">
+      <h3>Nuestro Objetivo</h3>
+      <p>
+        El objetivo de esta plataforma es ser un punto de encuentro donde los jóvenes mexicanos puedan consultar,
+        compartir experiencias directas, obtener opiniones de estudiantes y egresados, y
+        participar en debates abiertos, sobre lo que implica una carrera profesional, así como sus
+        oportunidades, retos y las diferentes perspectivas laborales al egresar de ellas.
+      </p>
+    </div>
+    <div class="col-md-6 mt-5 mb-4 text-center" data-aos="fade-up">
+      <img src="./assets/Nosotros/5806789-removebg-preview.png" alt="Sobre UniReview" class="img-fluid" style="max-width: 80%;">
+    </div>
+
+    <!-- Sección: Misión  -->
+   
+    <div class="col-md-6 order-md-2 mt-5 mb-4" data-aos="fade-up">
+      <h3>Nuestra Misión</h3>
+      <p>
+        Guiar a futuros universitarios en la elección de su carrera mediante el intercambio de experiencias
+        personales, reales y auténticas de estudiantes y egresados, que les permitan tomar decisiones informadas
+        sobre su futuro profesional.
+      </p>
+    </div> 
+    <div class="col-md-6 order-md-1 mt-5 mb-4 text-center" data-aos="fade-up">
+      <img src="./assets/Nosotros/7605885-removebg-preview.png" alt="Nuestra Misión" class="img-fluid w-100">
+    </div>
+
+    <!-- Sección: Visión -->
+    <div class="col-md-6 order-md-1 mt-5 mb-4" data-aos="fade-up">
+      <h3>Nuestra Visión</h3>
+      <p>
+        Ser la primera alternativa en brindar una guía específica de orientación, basada en experiencias reales, a
+        estudiantes con dudas respecto a su futuro profesional, impactando positivamente en su toma de decisiones.
+      </p>
+    </div>
+    <div class="col-md-6 order-md-2 mt-5 mb-4 text-center" data-aos="fade-up">
+      <img src="./assets/Nosotros/9019830-removebg-preview.png" alt="Nuestra Visión" class="img-fluid" style="max-width: 80%;">
+    </div>
+  </div>
+</div>
+
+ 
+<!--Footer-->
+  <div id="footer"></div>
+
+<!-- Swiper Web Components -->
+<script type="module" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+<!--AOS (animaciones)-->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <!---->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!-- JS  -->
+  <script src="./scripts/load-scripts.js"></script>
+  <script src="./scripts/nosotros.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+html, body{
+    margin: 0;
+    padding: 0;
+
+    font-family: "Josefin Sans", sans-serif !important;
+}
+#logo{
+  color:#F6F4F0  !important;
+  text-decoration: none !important;
+  font-size: 30px;
+}
+#enlace-pagina{
+  color:#F6F4F0  !important;
+}
+div.fluid-container{
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    background-color: #09122C;
+}
+
+div#logo{
+    display:block;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    padding: 0 10px;
+    position: relative;
+}
+  
+  .nav-links li:not(:last-child)::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    color: #F6F4F0; /* mismo color que el texto */
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #F6F4F0;
+    font-weight: 500;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; /* para alinear verticalmente */
+    padding: 10px 20px;
+  }
+
+  .menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centra todo horizontalmente */
+  }
+  
+@media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-links li {
+      padding: 10px 0;
+    }
+  
+    .nav-links li::after {
+      content: none;
+      display: none;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center; /*para centrar */
+      }
+    
+      #logo,
+      .nav-links {
+        margin: 10px 0; /* espacio entre elementos */
+      }
+  }
+
+  a:hover,
+  a:focus {
+  color: #EB5A3C !important;  /* Color naranja */
+  text-decoration: none; /* Si no quieres el subrayado */
+}

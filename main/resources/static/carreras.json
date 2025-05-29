@@ -1,0 +1,325 @@
+[
+  {
+    "nombre_carrera": "Lic. Arquitectura",
+    "ubicacion": "Ciudad de México (Sede)",
+    "nombre_escuela": "Universidad Nacional Autónoma de México",
+    "enlace": "https://oferta.unam.mx/arquitectura.html",
+    "rama": "Ciencias de la Ingeniería y Matemáticas"
+  },
+  {
+    "nombre_carrera": "Lic. Educación Física",
+    "ubicacion": "Ciudad de México (Sede)",
+    "nombre_escuela": "Universidad Nacional Autónoma de México",
+    "enlace": "https://www.aefcm.gob.mx/dgenam/ESEF/oferta-educativa.html",
+    "rama": "Ciencias de la Educación y Humanidades"
+  },
+  {
+    "nombre_carrera": "Lic. Comunicación y Periodismo",
+    "ubicacion": "Ciudad de México (Sede)",
+    "nombre_escuela": "Universidad Nacional Autónoma de México",
+    "enlace": "https://oferta.unam.mx/comunicacion-y-periodismo.html",
+    "rama": "Ciencias de la Ingeniería"
+  },
+  {
+    "nombre_carrera": "Ing. Telemática",
+    "ubicacion": "Ciudad de México (Sede)",
+    "nombre_escuela": "Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional",
+    "enlace": "https://www.upiita.ipn.mx/oferta-educativa/telematica",
+    "rama": "Ciencias de la Ingeniería"
+  },
+  {
+    "nombre_carrera": "Ing. Tecnologías de la Información y Comunicaciones",
+    "ubicacion": "Aguascalientes, Aguascalientes",
+    "nombre_escuela": "Instituto Tecnológico de Aguascalientes",
+    "enlace": "https://aguascalientes.tecnm.mx/ingenieria-en-tecnologia-de-la-informacion-comunicaciones/",
+    "rama": "Ciencias de la Ingeniería"
+  },
+  {
+    "nombre_carrera": "Ing. Tecnologías de la Información y Comunicaciones",
+    "ubicacion": "Reynosa, Tamaulipas",
+    "nombre_escuela": "Instituto Tecnológico de Reynosa",
+    "enlace": "https://assets-solfit-app.s3.amazonaws.com/reynosa.tecnm.mx/sitio/site_drive/DriveFile_512_17181501686668e4186d639.pdf",
+    "rama": "Ciencias de la Ingeniería"
+  },
+  {
+    "nombre_carrera": "Ing. Tecnologías de la Información y Comunicaciones",
+    "ubicacion": "Tlahuac, Ciudad de México",
+    "nombre_escuela": "Instituto Tecnológico de Tláhuac II",
+    "enlace": " https://tlahuac2.tecnm.mx/oferta-educativa/tecnologias-informacion",
+    "rama": "Ciencias de la Ingeniería"
+  },
+  {
+    "nombre_carrera": "Ing. Química",
+    "ubicacion": "Aguascalientes, Aguascalientes",
+    "nombre_escuela": "Instituto Tecnológico de Aguascalientes",
+    "enlace": "https://aguascalientes.tecnm.mx/ingenieria-en-quimica/",
+    "rama": "Ciencias Básicas"
+  },
+  {
+    "nombre_carrera": "Ing. Mecánica",
+    "ubicacion": "Aguascalientes, Aguascalientes",
+    "nombre_escuela": "Instituto Tecnológico de Aguascalientes",
+    "enlace": "https://aguascalientes.tecnm.mx/ingenieria-mecanica/",
+    "rama": "Ciencias Automotrices"
+  },
+  {
+    "nombre_carrera": "Ing. Mecánica",
+    "ubicacion": "Tijuana, Baja California",
+    "nombre_escuela": "Centro de Enseñanza Técnica y Superior",
+    "enlace": "https://www.Centro de Enseñanza Técnica y Superior.mx/programas/ingenieria-mecanica/",
+    "rama": "Ciencias de la Ingeniería"
+  },
+  {
+    "nombre_carrera": "Ing. En Materiales",
+    "ubicacion": "Aguascalientes, Aguascalientes",
+    "nombre_escuela": "Instituto Tecnológico de Aguascalientes",
+    "enlace": "https://aguascalientes.tecnm.mx/ingenieria-en-materiales/"
+  },
+  {
+    "nombre_carrera": "Ing. Industrial",
+    "ubicacion": "Aguascalientes, Aguascalientes",
+    "nombre_escuela": "Instituto Tecnológico de Aguascalientes",
+    "enlace": "https://aguascalientes.tecnm.mx/ingenieria-industrial/",
+    "rama": "Ciencias de la Ingeniería"
+  },
+  {
+    "nombre_carrera": "Ing. Industrial",
+    "ubicacion": "Tijuana, Baja California",
+    "nombre_escuela": "Centro de Enseñanza Técnica y Superior",
+    "enlace": "https://www.Centro de Enseñanza Técnica y Superior.mx/programas/ingenieria-industrial/",
+    "rama": "Ciencias de la Ingeniería"
+  },
+  {
+    "nombre_carrera": "Ing. Gestión Empresarial",
+    "ubicacion": "Aguascalientes, Aguascalientes",
+    "nombre_escuela": "Instituto Tecnológico de Aguascalientes",
+    "enlace": "https://aguascalientes.tecnm.mx/ingenieria-en-gestion-empresarial/"
+  },
+  {
+    "nombre_carrera": "Ing. Electrónica",
+    "ubicacion": "Aguascalientes, Aguascalientes",
+    "nombre_escuela": "Instituto Tecnológico de Aguascalientes",
+    "enlace": "https://aguascalientes.tecnm.mx/ingenieria-electronica/"
+  },
+  {
+    "nombre_carrera": "Ing. Electrónica",
+    "ubicacion": "Aguascalientes (Sede)",
+    "nombre_escuela": "Universidad Autónoma de Aguascalientes",
+    "enlace": "https://www.uaa.mx/portal/oferta-educativa/licenciaturas/",
+    "rama": "Ciencias de la Ingeniería"
+  },
+  {
+    "nombre_carrera": "Ing. Eléctrica",
+    "ubicacion": "Aguascalientes, Aguascalientes",
+    "nombre_escuela": "Instituto Tecnológico de Aguascalientes",
+    "enlace": "https://aguascalientes.tecnm.mx/ingenieria-electrica/"
+  },
+  {
+    "nombre_carrera": "Ing. En Semiconductores",
+    "ubicacion": "Aguascalientes, Aguascalientes",
+    "nombre_escuela": "Instituto Tecnológico de Aguascalientes",
+    "enlace": "https://aguascalientes.tecnm.mx/ingenieria-en-semiconductores/"
+  },
+  {
+    "nombre_carrera": "Ing. En Ciberseguridad",
+    "ubicacion": "Aguascalientes, Aguascalientes",
+    "nombre_escuela": "Instituto Tecnológico de Aguascalientes",
+    "enlace": "https://aguascalientes.tecnm.mx/ingenieria-en-ciberseguridad/",
+    "rama": "Ciencias de la Ingeniería"
+  },
+  {
+    "nombre_carrera": "Lic. en Administración de Empresas",
+    "ubicacion": "Aguascalientes, Aguascalientes",
+    "nombre_escuela": "Instituto Tecnológico de Aguascalientes",
+    "enlace": "https://aguascalientes.tecnm.mx/licenciatura-en-administracion/",
+    "rama": "Ciencias Económicas y Administrativas"
+  },
+  {
+    "nombre_carrera": "Lic. en Administración de Empresas",
+    "ubicacion": "Aguascalientes (Sede)",
+    "nombre_escuela": "Universidad Autónoma de Aguascalientes",
+    "enlace": "https://www.uaa.mx/portal/oferta-educativa/licenciaturas/",
+    "rama": "Ciencias Económicas y Administrativas"
+  },
+  {
+    "nombre_carrera": "Lic. en Administración de Empresas",
+    "ubicacion": "Tijuana, Baja California",
+    "nombre_escuela": "Centro de Enseñanza Técnica y Superior",
+    "enlace": "https://www.Centro de Enseñanza Técnica y Superior.mx/programas/licenciatura-en-administracion-de-empresas/",
+    "rama": "Ciencias Económicas y Administrativas"
+  },
+  {
+    "nombre_carrera": "Lic. en Administración de Empresas",
+    "ubicacion": "Mexicali, Baja California (Sede)",
+    "nombre_escuela": "Universidad Autónoma de Baja California",
+    "enlace": "https://www.uabc.mx/oferta-ed-programas-educativos/",
+    "rama": "Ciencias Económicas y Administrativas"
+  },
+  {
+    "nombre_carrera": "Ing. En Agronomía",
+    "ubicacion": "Aguascalientes (Sede)",
+    "nombre_escuela": "Universidad Autónoma de Aguascalientes",
+    "enlace": "https://www.uaa.mx/portal/oferta-educativa/licenciaturas/",
+    "rama": "Ciencias Agropecuarias"
+  },
+  {
+    "nombre_carrera": "Ing. En Alimentos",
+    "ubicacion": "Aguascalientes (Sede)",
+    "nombre_escuela": "Universidad Autónoma de Aguascalientes",
+    "enlace": "https://www.uaa.mx/portal/oferta-educativa/licenciaturas/",
+    "rama": "Ciencias Agropecuarias"
+  },
+  {
+    "nombre_carrera": "Médico Veterinario Zootecnista",
+    "ubicacion": "Aguascalientes (Sede)",
+    "nombre_escuela": "Universidad Autónoma de Aguascalientes",
+    "enlace": "https://www.uaa.mx/portal/oferta-educativa/licenciaturas/",
+    "rama": "Ciencias Agropecuarias"
+  },
+  {
+    "nombre_carrera": "Ing. Bioquímica",
+    "ubicacion": "Aguascalientes (Sede)",
+    "nombre_escuela": "Universidad Autónoma de Aguascalientes",
+    "enlace": "https://www.uaa.mx/portal/oferta-educativa/licenciaturas/",
+    "rama": "Ciencias Básicas"
+  },
+  {
+    "nombre_carrera": "Ing. En Sistemas Computacionales",
+    "ubicacion": "Aguascalientes (Sede)",
+    "nombre_escuela": "Universidad Autónoma de Aguascalientes",
+    "enlace": "https://www.uaa.mx/portal/oferta-educativa/licenciaturas/"
+  },
+  {
+    "nombre_carrera": "Ing.  Industrial Estadístico",
+    "ubicacion": "Aguascalientes (Sede)",
+    "nombre_escuela": "Universidad Autónoma de Aguascalientes",
+    "enlace": "https://www.uaa.mx/portal/oferta-educativa/licenciaturas/",
+    "rama": "Ciencias Básicas"
+  },
+  {
+    "nombre_carrera": "Lic. Biología",
+    "ubicacion": "Aguascalientes (Sede)",
+    "nombre_escuela": "Universidad Autónoma de Aguascalientes",
+    "enlace": "https://www.uaa.mx/portal/oferta-educativa/licenciaturas/",
+    "rama": "Ciencias Básicas"
+  },
+  {
+    "nombre_carrera": "Lic. Biotecnología",
+    "ubicacion": "Aguascalientes (Sede)",
+    "nombre_escuela": "Universidad Autónoma de Aguascalientes",
+    "enlace": "https://www.uaa.mx/portal/oferta-educativa/licenciaturas/",
+    "rama": "Ciencias Básicas"
+  },
+  {
+    "nombre_carrera": "Lic. Nutrición",
+    "ubicacion": "Aguascalientes (Sede)",
+    "nombre_escuela": "Universidad Autónoma de Aguascalientes",
+    "enlace": "https://www.uaa.mx/portal/oferta-educativa/licenciaturas/",
+    "rama": "Ciencias Básicas"
+  },
+  {
+    "nombre_carrera": "Lic. Contador Público",
+    "ubicacion": "Tijuana, Baja California",
+    "nombre_escuela": "Centro de Enseñanza Técnica y Superior",
+    "enlace": "https://www.Centro de Enseñanza Técnica y Superior.mx/programas/licenciatura-en-contador-publico-internacional/",
+    "rama": "Ciencias Económicas y Administrativas"
+  },
+  {
+    "nombre_carrera": "Lic. Contador Público",
+    "ubicacion": "Mexicali, Baja California (Sede)",
+    "nombre_escuela": "Universidad Autónoma de Baja California",
+    "enlace": "https://www.uabc.mx/oferta-ed-programas-educativos/",
+    "rama": "Ciencias Económicas y Administrativas"
+  },
+  {
+    "nombre_carrera": "Lic. Diseño Gráfico",
+    "ubicacion": "Aguascalientes (Sede)",
+    "nombre_escuela": "Universidad Autónoma de Aguascalientes",
+    "enlace": "https://www.uaa.mx/portal/oferta-educativa/licenciaturas/",
+    "rama": "Ciencias del Diseño y Marketing"
+  },
+  {
+    "nombre_carrera": "Lic. Diseño Gráfico",
+    "ubicacion": "Tijuana, Baja California",
+    "nombre_escuela": "Centro de Enseñanza Técnica y Superior",
+    "enlace": "https://www.Centro de Enseñanza Técnica y Superior.mx/programas/licenciatura-en-diseno-grafico/",
+    "rama": "Ciencias del Diseño y Marketing"
+  },
+  {
+    "nombre_carrera": "Lic. En Mercadotecnia",
+    "ubicacion": "Tijuana, Baja California",
+    "nombre_escuela": "Centro de Enseñanza Técnica y Superior",
+    "enlace": "https://www.Centro de Enseñanza Técnica y Superior.mx/programas/licenciatura-en-administracion-de-mercadotecnia/",
+    "rama": "Ciencias del Diseño y Marketing"
+  },
+  {
+    "nombre_carrera": "Lic. En Mercadotecnia",
+    "ubicacion": "Mexicali, Baja California (Sede)",
+    "nombre_escuela": "Universidad Autónoma de Baja California",
+    "enlace": "https://www.uabc.mx/oferta-ed-programas-educativos/",
+    "rama": "Ciencias del Diseño y Marketing"
+  },
+  {
+    "nombre_carrera": "Lic. En Negocios Internacionales",
+    "ubicacion": "Tijuana, Baja California",
+    "nombre_escuela": "Centro de Enseñanza Técnica y Superior",
+    "enlace": "https://www.Centro de Enseñanza Técnica y Superior.mx/programas/licenciatura-en-negocios-internacionales/",
+    "rama": "Ciencias Empresariales"
+  },
+  {
+    "nombre_carrera": "Ing. Mecatrónica",
+    "ubicacion": "Tijuana, Baja California",
+    "nombre_escuela": "Centro de Enseñanza Técnica y Superior",
+    "enlace": "https://www.Centro de Enseñanza Técnica y Superior.mx/programas/ingenieria-mecatronica/",
+    "rama": "Ciencias de la Ingeniería"
+  },
+  {
+    "nombre_carrera": "Ing. Software",
+    "ubicacion": "Tijuana, Baja California",
+    "nombre_escuela": "Centro de Enseñanza Técnica y Superior",
+    "enlace": "https://www.Centro de Enseñanza Técnica y Superior.mx/programas/ingenieria-de-software/",
+    "rama": "Ciencias de la Ingeniería"
+  },
+  {
+    "nombre_carrera": "Lic. Derecho",
+    "ubicacion": "Tijuana, Baja California",
+    "nombre_escuela": "Centro de Enseñanza Técnica y Superior",
+    "enlace": "https://www.Centro de Enseñanza Técnica y Superior.mx/programas/licenciatura-en-derecho/",
+    "rama": "Ciencias Políticas"
+  },
+  {
+    "nombre_carrera": "Lic. Derecho",
+    "ubicacion": "Mexicali, Baja California (Sede)",
+    "nombre_escuela": "Universidad Autónoma de Baja California",
+    "enlace": "https://www.uabc.mx/oferta-ed-programas-educativos/",
+    "rama": "Ciencias Políticas"
+  },
+  {
+    "nombre_carrera": "Lic. Psicología Clínica",
+    "ubicacion": "Aguascalientes (Sede)",
+    "nombre_escuela": "Universidad Autónoma de Aguascalientes",
+    "enlace": "https://www.uaa.mx/portal/oferta-educativa/licenciaturas/",
+    "rama": "Ciencias Sociales y Humanidades"
+  },
+  {
+    "nombre_carrera": "Lic. Psicología Clínica",
+    "ubicacion": "Tijuana, Baja California",
+    "nombre_escuela": "Centro de Enseñanza Técnica y Superior",
+    "enlace": "https://www.Centro de Enseñanza Técnica y Superior.mx/programas/licenciatura-en-psicologia-clinica/",
+    "rama": "Ciencias Sociales y Humanidades"
+  },
+  {
+    "nombre_carrera": "Lic. Gastronomía",
+    "ubicacion": "Mexicali, Baja California (Sede)",
+    "nombre_escuela": "Universidad Autónoma de Baja California",
+    "enlace": "https://www.uabc.mx/oferta-ed-programas-educativos/",
+    "rama": "Ciencias del Turismo y Mercadotecnia"
+  },
+  {
+    "nombre_carrera": "Lic. Gestión Turística",
+    "ubicacion": "Mexicali, Baja California (Sede)",
+    "nombre_escuela": "Universidad Autónoma de Baja California",
+    "enlace": "https://www.uabc.mx/oferta-ed-programas-educativos/",
+    "rama": "Ciencias del Turismo y Mercadotecnia"
+  }
+]

@@ -47,6 +47,7 @@ class UniReviewApplicationTests {
 	private EscuelaRepository escuelaRepository;
 	
 	@Test
+	@Disabled("Probado una vez, deshabilitado para subsecuentes ocasiones")
 	@DisplayName("Prueba para obetener al usuario con ID 1 y corroborar que su correo corresponde al guardado en BD")
 	void pruebaGET()throws Exception {
 		this.mockMvc.perform(get("/unireview/usuarios/").header("Authorization", token) ) 
@@ -69,6 +70,7 @@ class UniReviewApplicationTests {
 	}//prueba DELETE usuario
 	
 	@Test
+	@Disabled("Probado una vez, deshabilitado para subsecuentes ocasiones")
 	@DisplayName("Prueba para editar propiedades del usuario con el ID 1")
 	void pruebaPUT()throws Exception {
 		this.mockMvc.perform(put("/unireview/usuarios/1?usu_nombre=Raul Ramirez Glez&usu_fechanacimiento=2001-12-31").header("Authorization", token) ) 
@@ -80,6 +82,7 @@ class UniReviewApplicationTests {
 	
 ///////////////////////////////Test para publicaciones//////////////////////////////////////////////
 	@Test
+	@Disabled("Probado una vez, deshabilitado para subsecuentes ocasiones")
 	@DisplayName("Prueba para obetener la publicacion con ID 2 y corroborar que su correo corresponde al guardado en BD")
 	void pruebaGETPubli()throws Exception {
 		this.mockMvc.perform(get("/unireview/publicaciones/2").header("Authorization", token) ) 
@@ -102,6 +105,7 @@ class UniReviewApplicationTests {
 	}//prueba DELETE publicacion
 	
 	@Test
+	@Disabled("Probado una vez, deshabilitado para subsecuentes ocasiones")
 	@DisplayName("Prueba para editar propiedades de la publicacion con el ID 2")
 	void pruebaPUTPubli()throws Exception {
 		this.mockMvc.perform(put("/unireview/publicaciones/2?publi_calificacion=5").header("Authorization", token) ) 
@@ -113,6 +117,7 @@ class UniReviewApplicationTests {
 	
 ///////////////////////////////Test para escuelas//////////////////////////////////////////////
 	@Test
+	@Disabled("Probado una vez, deshabilitado para subsecuentes ocasiones")
 	@DisplayName("Prueba para obetener la escuela con ID 1 y corroborar que su nombre coicide")
 	void pruebaGETEscuela()throws Exception {
 		this.mockMvc.perform(get("/unireview/escuelas/1").header("Authorization", token) ) 
@@ -134,6 +139,7 @@ class UniReviewApplicationTests {
 	}//prueba DELETE escuela
 	
 	@Test
+	@Disabled("Probado una vez, deshabilitado para subsecuentes ocasiones")
 	@DisplayName("Prueba para editar propiedades de la escuela con el ID 1")
 	void pruebaPUTEscuela()throws Exception {
 		this.mockMvc.perform(put("/unireview/escuelas/1?esc_ubicacion=Tamaulipas").header("Authorization", token) ) 
@@ -189,6 +195,7 @@ class UniReviewApplicationTests {
 	}//prueba DELETE carrera
 	
 	@Test
+	@Disabled("Probado una vez, deshabilitado para subsecuentes ocasiones")
 	@DisplayName("Prueba para editar propiedades de la carrera con el ID 2")
 	void pruebaPUTCarrera()throws Exception {
 		this.mockMvc.perform(put("/unireview/carreras/2?carr_nombre=Ingeniería Telemática").header("Authorization", token) ) 
@@ -247,7 +254,7 @@ class UniReviewApplicationTests {
 	}//prueba PUT oferta Educativa
 	
 	@Test
-	//@Disabled("Probado una vez, deshabilitado para subsecuentes ocasiones")
+	@Disabled("Probado una vez, deshabilitado para subsecuentes ocasiones")
 	@DisplayName("Se prueba el POST para egregar una nueva oferta educativa")
 	void pruebaPOSTOferta() throws Exception {
 		Carrera carr = carreraRepository.save(new Carrera("Lic. Arte", 0d));
