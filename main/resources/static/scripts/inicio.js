@@ -130,7 +130,7 @@ if (!localStorage.getItem("comments")) {
 //Cargando las carreras de carreras.json
   $(document).ready(function () {
     const careerSelect = $('#careerSelect');
-    /* // ----------------------------
+     // ----------------------------
     const requestOptions = {
       method: "GET",
       redirect: "follow"
@@ -159,28 +159,28 @@ if (!localStorage.getItem("comments")) {
           careerSelect.selectpicker();
 
       })
-      .catch((error) => console.error(error)); */
+      .catch((error) => console.error(error)); 
          //-----------------------------original>
- $.getJSON('carreras.json', function (data) {
-          careerSelect.empty();
-          careerSelect.append('<option value="" selected disabled>Selecciona tu carrera</option>');
+//  $.getJSON('carreras.json', function (data) {
+//           careerSelect.empty();
+//           careerSelect.append('<option value="" selected disabled>Selecciona tu carrera</option>');
 
-          const carrerasAgregadas = new Set();
+//           const carrerasAgregadas = new Set();
 
-          // Ordenar por nombre de carrera
-          data
-            .filter(item => item.nombre_carrera) // ignorar entradas vacías
-            .sort((a, b) => a.nombre_carrera.localeCompare(b.nombre_carrera, 'es', { sensitivity: 'base' }))
-            .forEach(item => {
-              if (!carrerasAgregadas.has(item.nombre_carrera)) {
-                careerSelect.append(new Option(item.nombre_carrera, item.nombre_carrera));
-                carrerasAgregadas.add(item.nombre_carrera);
-              }
-            });
+//           // Ordenar por nombre de carrera
+//           data
+//             .filter(item => item.nombre_carrera) // ignorar entradas vacías
+//             .sort((a, b) => a.nombre_carrera.localeCompare(b.nombre_carrera, 'es', { sensitivity: 'base' }))
+//             .forEach(item => {
+//               if (!carrerasAgregadas.has(item.nombre_carrera)) {
+//                 careerSelect.append(new Option(item.nombre_carrera, item.nombre_carrera));
+//                 carrerasAgregadas.add(item.nombre_carrera);
+//               }
+//             });
 
-          careerSelect.selectpicker('destroy');
-          careerSelect.selectpicker();
-        }); 
+//           careerSelect.selectpicker('destroy');
+//           careerSelect.selectpicker();
+//         }); 
         //------------------------------ 
   });
 

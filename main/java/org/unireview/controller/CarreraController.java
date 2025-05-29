@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.unireview.model.Carrera;
 import org.unireview.service.CarreraService;
 
-@CrossOrigin(origins = "http://127.0.0.1:5501")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping(path="/unireview/carreras")
 public class CarreraController {

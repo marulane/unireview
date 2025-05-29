@@ -19,7 +19,7 @@ import org.unireview.model.Publicacion;
 import org.unireview.model.Usuario;
 import org.unireview.service.PublicacionService;
 
-@CrossOrigin(origins = "http://127.0.0.1:5501")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping(path="/unireview/publicaciones/")
 //http://localhost:8080/unireview/publicaciones
