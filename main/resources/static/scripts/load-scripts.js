@@ -1,4 +1,8 @@
 (function () {
+  let tokenjwt= sessionStorage.getItem("accessToken");
+  if(tokenjwt== undefined){
+    localStorage.removeItem("currentUser");
+  }
   fetch('./navbar.html')
   .then(res => res.text())
   .then(data => {

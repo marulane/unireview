@@ -7,7 +7,7 @@
     method: "GET",
     redirect: "follow"
   };
-
+//http://localhost:8080
   fetch("/unireview/escuelas/", requestOptions)
     .then((response) => response.text())
     .then((result) => {
@@ -45,7 +45,7 @@
     method: "GET",
     redirect: "follow"
   };
-
+//http://localhost:8080
   fetch("/unireview/carreras/", requestOptions)
     .then((response) => response.text())
     .then((result) => {
@@ -82,7 +82,7 @@ function cargarFiltrosDesdeLocalStorage() {
   method: "GET",
   redirect: "follow"
 };
-
+//http://localhost:8080
 fetch("/unireview/publicaciones/", requestOptions)
   .then((response) => response.text())
   .then((result) => {
@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
 //const listComments= document.getElementById("list-comments"); //Contenedor para comentarios
 
 function aplicarFiltros() {
-  console.log(allComments);
+  //console.log(allComments);
   const careerValue = document.getElementById("careerFilter").value;
   const schoolValue = document.getElementById("schoolFilter").value;
   const orderValue = document.getElementById("orderFilter").value;

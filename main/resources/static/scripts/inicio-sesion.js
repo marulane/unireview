@@ -35,10 +35,6 @@ btnLogin.addEventListener("click", function(event){
     isValid=false;
   }
   
-    ///////////////////////////////////////FETCH USUARIOS////////////////////////////////////////////////////
-
-     
-    //////////////////////////////////////////////////////////////////////////////////////////////////////
 
     //Buscando si existe el correo en el localStorage
 
@@ -75,58 +71,63 @@ btnLogin.addEventListener("click", function(event){
           };
 
           let userCheck;
-          fetch("/unireview/login/", requestOptions)
-          .then((response) => response.text())
-          .then((result) => {
-            result = JSON.parse(result);
-            sessionStorage.setItem("accessToken", JSON.stringify(result.accessToken));
-            userCheck = result.usuario;
-            //console.log(userCheck);
+        //http://localhost:8080
+ fetch("/unireview/login/", requestOptions)
+  .then((response) => response.text())
+  .then((result) => {
+    try {
+      result = JSON.parse(result);
+    } catch (e) {
+      // Aquí manejamos respuestas que no son JSON (por ejemplo, errores 500 en HTML)
+      alertValidacionesTexto.innerHTML += "<strong>Correo o contraseña incorrectos.</strong><br/>";
+      alertValidaciones.style.display = "block";
+      txtPass.style.border = "solid medium red";
+      txtEmail.style.border = "solid medium red";
+      return;
+    }
 
-            //Si el correo no ha sido registrado
-            if (userCheck === null || userCheck.usu_email === "") {
-              alertValidacionesTexto.innerHTML += "<strong>Autenticación incorrecta. Verifica tus credenciales.</strong><br/>";
-              alertValidaciones.style.display = "block";
-              txtPass.style.border = "solid medium red";
-              txtEmail.style.border = "solid medium red";
-              isValid = false;
-            }
+    const userCheck = result.usuario;
 
-                
+    if (!userCheck || !userCheck.usu_email) {
+      alertValidacionesTexto.innerHTML += "<strong>Autenticación incorrecta. Verifica tus credenciales.</strong><br/>";
+      alertValidaciones.style.display = "block";
+      txtPass.style.border = "solid medium red";
+      txtEmail.style.border = "solid medium red";
+      return;
+    }
 
-            if(sessionStorage.getItem("accessToken") != null){
-              
+    sessionStorage.setItem("accessToken", JSON.stringify(result.accessToken));
 
+    const currentUser = {
+      idusuario: userCheck.idusuario,
+      userName: userCheck.usu_nombre,
+      userTel: userCheck.usu_telefono,
+      userEmail: userCheck.usu_email,
+      userdateOfBirth: userCheck.usu_fechaNacimiento,
+      userPass: "",
+      userPP: userCheck.usu_foto_perfil
+    };
 
-              let currentUser = {
-                  "idusuario":userCheck.idusuario,
-                  "userName" : userCheck.usu_nombre,
-                  "userTel" : userCheck.usu_telefono,
-                  "userEmail" : userCheck.usu_email,
-                  "userdateOfBirth" : userCheck.usu_fechaNacimiento,
-                  "userPass" : "",
-                  "userPP" : userCheck.usu_foto_perfil
-              }
+    localStorage.setItem("currentUser", JSON.stringify(currentUser));
 
-              localStorage.setItem("currentUser", JSON.stringify(currentUser));
-
-              //SwetAlert2 
-              Swal.fire({
-                  title: "Inicio de sesión exitoso",
-                  text: "Serás redirigido a la página de inicio",
-                  imageUrl: "../assets/love.svg",
-                  imageWidth: 300,
-                  imageHeight: 190,
-                  confirmButtonColor: "#EB5A3C"
-                }).then((result) => {
-                  if (result.isConfirmed) {
-                    window.location.href = "./index.html"; 
-                  }
-                });;
-          };
-
-          })
-          .catch((error) => console.error(error));
+    Swal.fire({
+      title: "Inicio de sesión exitoso",
+      text: "Serás redirigido a la página de inicio",
+      imageUrl: "../assets/love.svg",
+      imageWidth: 300,
+      imageHeight: 190,
+      confirmButtonColor: "#EB5A3C"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.href = "./index.html";
+      }
+    });
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+    alertValidacionesTexto.innerHTML += "<strong>Error inesperado. Intenta de nuevo más tarde.</strong><br/>";
+    alertValidaciones.style.display = "block";
+  });
           //----------------------------
       
       

@@ -135,7 +135,7 @@ let inicioCarreras;
       method: "GET",
       redirect: "follow"
     };
-
+//http://localhost:8080
     fetch("/unireview/carreras/", requestOptions)
       .then((response) => response.text())
       .then((result) => {
@@ -291,7 +291,7 @@ const total = 4; // cantidad de tarjetas
   method: "GET",
   redirect: "follow"
   };
-
+//http://localhost:808
 fetch("/unireview/publicaciones/filter/publisDestacadas", requestOptions)
   .then((response) => response.text())
   .then((result) => { 
@@ -406,7 +406,7 @@ document.getElementById("btnBuscar").addEventListener("click", function (e) {
   method: "GET",
   redirect: "follow"
 };
-
+//http://localhost:8080
 fetch("/unireview/publicaciones/", requestOptions)
   .then((response) => response.text())
   .then((result) => {

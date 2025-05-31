@@ -259,7 +259,7 @@ const requestOptions = {
   method: "GET",
   redirect: "follow"
 };
-
+//http://localhost:8080
 fetch("/unireview/publicaciones/", requestOptions)
   .then((response) => response.text())
   .then((result) => {
@@ -490,6 +490,7 @@ btnPublicar.addEventListener("click", function(event){
     txtEtiquetas.style.color= "red";
     alertValidacionesTexto.innerHTML +="<strong> Selecciona al menos una etiqueta. </strong><br/>";
     alertValidaciones.style.display="block";
+    isValid=false;
   }
 
   if(isValid){
@@ -542,7 +543,7 @@ btnPublicar.addEventListener("click", function(event){
       body: raw,
       redirect: "follow"
     };
-
+    //http://localhost:8080
     fetch("/unireview/publicaciones/", requestOptions)
       .then((response) => response.text())
       .then((result) => {
@@ -599,7 +600,7 @@ function mostrarTopCarreras() {
   const topCarreras = [];
 
   for (let carrera of ordenadas) {
-    console.log(carrera);
+    //console.log(carrera);
     const nombre = carrera.carrera.carr_nombre.trim();
     if (!carrerasUnicas.has(nombre)) {
       carrerasUnicas.add(nombre);
