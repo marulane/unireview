@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla</title>
+    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/modal-carrera.css">
+   <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+
+
+</head>
+<body>
+    <!-- modal-carrera.html -->
+    <div class="modal fade" id="modalCarrera" tabindex="-1" aria-labelledby="modalCarreraLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+        <div class="modal-header justify-content-center bg-naranja position-relative">
+            <h5 class="modal-title text-white text-center" id="modalCarreraLabel">Nombre de la carrera</h5>
+            <button type="button" class="btn-close position-absolute end-0 top-50 translate-middle-y me-3" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+
+        <div class="modal-body">
+            <p><strong>Evaluación promedio:</strong> <span id="modalPromedio">⭐ 0</span></p>
+            <p class="text-muted"><span id="modalNumEvaluaciones"></span></p>
+            <p><a id="enlaceDetalles" href="#" target="_blank" style="display: none;"></a></p>
+            <p><strong>Carrera ofertada en las siguientes instituciones:</strong></p>
+            <div id="modalEnlacesCarrera">
+                
+            </div> <!-- Aquí van todos los enlaces dinámicos -->
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="btnIrAlForo">Ver en el Foro</button>
+        </div>
+
+        </div>
+    </div>
+    </div>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <!-- Alertas -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- JS  -->
+</body>
+</html>

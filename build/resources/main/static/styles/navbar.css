@@ -1,0 +1,14 @@
+.navbar {
+    background-color: #09122C !important;
+}
+
+.navbar .nav-link {
+    color: #F6F4F0 !important;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 21px;
+}
+
+.navbar a:hover {
+    background-color: #00A5CF;
+    color: #F6F4F0;
+}

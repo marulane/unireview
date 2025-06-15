@@ -1,0 +1,288 @@
+body{
+    background-color: #F6F4F0 !important;
+}
+
+.contenedor-perfil {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* sombra suave */
+  transition: box-shadow 0.3s ease;
+}
+
+.datos-usuario {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente si es necesario */
+}
+
+#fotoPerfil{
+    margin-bottom: 20px;
+    border-radius: 40px;
+}
+
+#divTablaInofamcion{
+    margin-top: 50px;
+}
+
+#tabla-datos td.table-header {
+    font-weight: bold;
+    color: #707070;
+}
+.colwidhtMain{
+  width: 34%;
+}
+.colwidht{
+  width: 33%;
+}
+
+.info-contenedor {
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 25px 15px 15px 15px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  /* border-left: 4px solid #fd6b4d; */
+}
+
+.contenedor-titulo {
+  color: #fd6b4d !important;
+  position: absolute;
+  /* text-align: right; */
+  top: -12px;
+  left: 15px;
+  background: #fff;
+  padding: 0 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+/* Separacion entre foto de perfil e info */
+.datos-usuario{
+    margin-left: 100px;
+}
+.datos-usuario h3 {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.datos-usuario h5 {
+  color: #555;
+  margin-bottom: 0;
+}
+
+/* Efectos hover sobre foto de perfil */
+.foto-perfil-container {
+  position: relative;
+  width: 180px;
+  height: 180px;
+}
+
+.foto-perfil-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.foto-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: #00a6cf8a; */
+  background-color: #b3e4f1b7; /* azul con transparencia */
+  border-radius: 40px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.foto-perfil-container:hover .foto-overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.icono-lapiz {
+  color: white;
+  font-size: 2rem;
+}
+
+/* Botón Editar Info */
+
+.btnEditarInfo{
+    color: #0d6efd;         /* azul Bootstrap */
+    background: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btnEditarInfo:hover{
+background-color: #fd6b4d;
+  color: white;
+}
+
+/* Botón Guardar Info */
+
+.btnGuardarInfo{
+    color: green;         /* azul Bootstrap */
+    background: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btnGuardarInfo:hover{
+background-color: green;
+  color: white;
+}
+
+/* Botón Cancelar Info */
+
+.btnCancelarInfo{
+    color: rgb(190, 3, 3);         /* azul Bootstrap */
+    background: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btnCancelarInfo:hover{
+background-color: rgb(190, 3, 3);
+  color: white;
+}
+
+.input-bgc {
+  /* border-color: #EB5A3C !important;  Borde naranja */
+  background-color: #ffe5e0 !important; 
+}
+
+.custom-input:focus {
+  border-color: #ff8800 !important; /* Color de borde al hacer focus */
+  box-shadow: 0 0 0 0.2rem rgba(255, 136, 0, 0.25) !important; /* Efecto de brillo */
+}
+
+/* selector para evitar clics en info que no se pueda editar */
+
+.btn-hover-disabled {
+  cursor: not-allowed !important;
+  color: gray !important;
+}
+
+.btnEditarInfo.btn-hover-disabled:hover {
+  background-color: #e0e0e0 !important;
+  color: gray !important;
+}
+
+/* Acordeón de comentarios */
+details {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  background: #f9f9f9;
+}
+
+details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.summary-toggle {
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.summary-toggle::after {
+  content: "▼";
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+
+.datos-usuario {
+    margin-left: 0 !important;
+    /* margin-top: 0px; */
+    text-align: center;
+    margin-bottom: 10px;
+    }
+
+  .foto-perfil-container {
+    margin-bottom: 0px;
+  }
+  #tabla-datos {
+    display: block;
+  }
+
+  #tabla-datos tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+  }
+
+  #tabla-datos td {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 0;
+  }
+
+  #tabla-datos td.table-header {
+    font-weight: bold;
+    color: #333;
+  }
+
+   #tabla-datos td:last-child {
+    text-align: right !important;
+  }
+
+  .btnEditarInfo {
+    display: inline-block;
+    margin-top: 0.5rem;
+  }
+  .btnEditarInfo {
+  float: right !important;
+    }
+
+.btnEliminarComentario {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 0.95rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+
+  .btnEliminarComentario i {
+    margin-right: 0.4rem;
+  }
+
+   .comentario-contenido {
+    flex-direction: column !important;
+  }
+
+  .perfil-comentario-img {
+    align-self: center;
+    margin-bottom: 10px;
+  }
+
+  .eliminar-contenedor {
+    width: 100%;
+  }
+
+  .btnEliminarComentario {
+    width: 100%;
+  }
+}

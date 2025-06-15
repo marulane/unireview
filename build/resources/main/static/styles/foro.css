@@ -1,0 +1,277 @@
+
+html{
+    color: #212121 !important;
+}
+h1{
+  position: relative;
+  top: 50px;
+  margin-bottom: 50px !important;
+  text-align: center;
+  color: #09122C !important;
+  
+}
+.star {
+    font-size: 2rem;
+    color: #ccc;
+    cursor: pointer;
+  }
+
+  .star.selected,
+  .star:hover,
+  .star:hover ~ .star {
+    color: gold;
+  }
+
+  .layout-principal {
+    display: flex;
+  }
+  .contenedor-fijo {
+    bottom: 80px;
+   /* Separación del borde izquierdo */
+    width: 270px;
+    background-color: #EB5A3C;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align:left;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    border-radius: 12px;  
+    /* min-height: 80vh; 👉 esto es lo nuevo 
+      Se cambió esta línea al media query*/
+  }
+  /* Para estilos de bootstrap select  */
+ .bootstrap-select.is-invalid .dropdown-toggle {
+  border: 2px solid red !important;
+}
+.tarjeta-resena {
+  border-left: 1px solid #f0f0f0;
+}
+  
+  /* Mover el contenido a la derecha considerando el menú + margen */
+  /* main.container {
+    margin: 20px; /* sin espacio lateral */
+ 
+@media (min-width: 1025px) {
+  .contenedor-fijo {
+    width: 100%; /*  Así se adapta al ancho de su columna Bootstrap */
+    max-width: 100%; /* por seguridad */
+    position: sticky;
+    top: 80px;
+    min-height: 80vh;
+  }
+}
+  
+@media (max-width: 1024px) {
+  .contenedor-fijo {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    /* padding-left: 5px; */
+    background-color: #EB5A3C;
+    color: white;
+    border-radius: 12px;
+    font-family: 'Josefin Sans', sans-serif;
+    overflow: visible; 
+    min-height: unset;  /* elimina altura mínima en móvil */
+  }
+}
+
+  ul {
+    list-style-type: none;
+  }
+
+  .btn-primary {
+    background-color: #EB5A3C !important;
+    border-color: #EB5A3C !important;
+  }
+
+  .btn-primary:hover {
+    background-color: #00A5CF !important;
+    border-color: #ccc !important;
+    color: #EB5A3C;
+    
+  }
+  
+  a:hover,
+  a:focus {
+  color: #EB5A3C !important;  /* Color naranja */
+  text-decoration: none; /* Si no quieres el subrayado */
+}
+
+.form-control:focus {
+  border-color: #EB5A3C !important;  /* Borde naranja */
+  background-color: #ffe5e0 !important;  /* Fondo claro al hacer foco */
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.953) !important;  /* Sombra naranja */
+  outline: none;  /* Quitar borde azul predeterminado */
+}
+
+.tarjeta-resena {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* sombra suave */
+  transition: box-shadow 0.3s ease;
+}
+
+.tarjeta-resena:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+#topCarreras {
+  background-color: #EB5A3C; /* fondo claro */
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px  rgba(255, 255, 255, 0.953); /* sombra suave */
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+#topCarreras ul {
+  padding-left: 1rem;
+}
+
+.filtro-contenedor {
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 25px 15px 15px 15px;
+  margin-bottom: 20px;
+  /* border-left: 4px solid #fd6b4d; */
+}
+
+.current-user-fullname{
+  color: #00A5CF !important;
+  font-size: 1.1rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 20px !important;
+}
+
+/* option por defecto en gris */
+.bootstrap-select .dropdown-toggle:focus,
+.bootstrap-select .dropdown-toggle:active,
+.bootstrap-select .dropdown-toggle:focus:active {
+  border-color: #EB5A3C !important;
+  /* box-shadow: 0 0 0 0.25rem rgba(235, 90, 60, 0.25) !important; */
+  outline: none !important;
+}
+
+.filtro-titulo {
+  color: #fd6b4d !important;
+  position: absolute;
+  /* text-align: right; */
+  top: -12px;
+  left: 15px;
+  background: #fff;
+  padding: 0 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.comentarios-titulo {
+  color: #fd6b4d !important;
+  position: absolute;
+  text-align: right; 
+  top: -12px;
+  /* left: 15px; */
+  background: #fff;
+  padding: 0 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.comentario-card {
+  border: none !important;
+  box-shadow: -4px 4px 8px -2px rgba(0, 0, 0, 0.3); /* izquierda y abajo */
+  border-radius: 0 5px 5px 0;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+select {
+  appearance: auto !important;
+  -webkit-appearance: auto !important;
+  -moz-appearance: auto !important;
+}
+
+/* Etiquetas */
+.tag {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 15px;
+  margin: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: white;
+  transition: transform 0.2s;
+}
+
+.tag:hover {
+  transform: scale(1.05);
+}
+
+/* Colores específicos por valor */
+.tag[data-value="Retícula"] { background-color: #e74c3c; }
+.tag[data-value="Ubicación"] { background-color: #00A5CF; }
+.tag[data-value="Atención"] { background-color: #f39c12; }
+.tag[data-value="Colegiatura"] { background-color: #05853a; }
+.tag[data-value="Dificultad"] { background-color: #8e44ad; }
+.tag[data-value="Experiencia personal"] { background-color: #865011 ; }
+.tag[data-value="Campo laboral"] { background-color: #f395df; }
+.tag[data-value="Instalaciones"] { background-color: #3fa83f; }
+.tag[data-value="Profesores"] { background-color: #0b72f8; }
+.tag[data-value="Sueldo de egresado"] { background-color: #af3d3d; }
+.tag[data-value="Tips/Consejos"] { background-color: #fda655; }
+
+/* Estado activo */
+.tag.tag-selected {
+  background-color: #ccc !important;
+  color: #333 !important;
+}
+
+.btnListaCarreras{
+  background: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  color: white;
+  text-align: left;
+  width: 100%;
+  padding: 0;
+  line-height: 1.5;
+}
+
+/* Acomodar foto de perfil arriba del comentario en vista móvil */
+@media (max-width: 768px) {
+  .comentario-contenido {
+    flex-direction: column !important;
+  }
+
+  .perfil-comentario-img {
+    align-self: center;
+    margin-bottom: 10px;
+  }
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  flex: 1;
+}
+
+footer {
+  color: white;
+  padding: 20px;
+  text-align: center;
+}

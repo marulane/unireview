@@ -1,0 +1,1227 @@
+[
+  {
+    "ubicacion": "Ciudad de México",
+    "nombre": "Escuela Superior de Educación Física",
+    "pagina_web": "https://www.aefcm.gob.mx/dgenam/ESEF/"
+  },
+  {
+    "ubicacion": "Aguascalientes, Aguascalientes",
+    "nombre": "Instituto Tecnológico de Aguascalientes",
+    "pagina_web": "https://aguascalientes.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Aguascalientes, Aguascalientes",
+    "nombre": "Universidad Autónoma de Aguascalientes",
+    "pagina_web": "https://www.uaa.mx/portal/"
+  },
+  {
+    "ubicacion": "Aguascalientes, Aguascalientes",
+    "nombre": "Universidad Politécnica de Aguascalientes",
+    "pagina_web": "https://www.upa.edu.mx/"
+  },
+  {
+    "ubicacion": "Aguascalientes, Aguascalientes",
+    "nombre": "Universidad Tecnológica de Aguascalientes",
+    "pagina_web": "https://www.utags.edu.mx/"
+  },
+  {
+    "ubicacion": "Calvillo, Aguascalientes",
+    "nombre": "Universidad Tecnológica de Calvillo",
+    "pagina_web": "http://www.utcalvillo.edu.mx/"
+  },
+  {
+    "ubicacion": "Rincón de Romos, Aguascalientes",
+    "nombre": "Universidad Tecnológica del Norte de Aguascalientes",
+    "pagina_web": "https://www.utna.edu.mx/"
+  },
+  {
+    "ubicacion": "Tijuana, Baja California",
+    "nombre": "Centro de Enseñanza Técnica y Superior",
+    "pagina_web": "https://www.cetys.mx/"
+  },
+  {
+    "ubicacion": "Ensenada, Baja California",
+    "nombre": "Centro de Investigación Científica y de Educación Superior de Ensenada, Baja California",
+    "pagina_web": "https://www.cicese.edu.mx/"
+  },
+  {
+    "ubicacion": "Tijuana, Baja California",
+    "nombre": "El Colegio de la Frontera Norte, A.C.",
+    "pagina_web": "https://www.colef.mx/"
+  },
+  {
+    "ubicacion": "Mexicali, Baja California",
+    "nombre": "Instituto Tecnológico de Mexicali",
+    "pagina_web": "http://www.itmexicali.edu.mx/"
+  },
+  {
+    "ubicacion": "Tijuana, Baja California",
+    "nombre": "Instituto Tecnológico de Tijuana",
+    "pagina_web": "https://www.tijuana.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Mexicali, Baja California",
+    "nombre": "Universidad Autónoma de Baja California",
+    "pagina_web": "http://www.uabc.mx/"
+  },
+  {
+    "ubicacion": "La Paz, Baja California Sur",
+    "nombre": "Centro de Investigaciones Biológicas del Noroeste, S.C.",
+    "pagina_web": "https://www.cibnor.gob.mx/"
+  },
+  {
+    "ubicacion": "La Paz, Baja California Sur",
+    "nombre": "Instituto Tecnológico de La Paz",
+    "pagina_web": "http://www.itlp.edu.mx"
+  },
+  {
+    "ubicacion": "La Paz, Baja California Sur",
+    "nombre": "Universidad Autónoma de Baja California Sur",
+    "pagina_web": "http://www.uabcs.mx"
+  },
+  {
+    "ubicacion": "Lerma, Campeche",
+    "nombre": "Instituto Tecnológico de Campeche",
+    "pagina_web": "https://itcampeche.edu.mx/"
+  },
+  {
+    "ubicacion": "Chiná, Campeche",
+    "nombre": "Instituto Tecnológico de Chiná",
+    "pagina_web": "http://www.itchina.edu.mx"
+  },
+  {
+    "ubicacion": "Champotón, Campeche",
+    "nombre": "Instituto Tecnológico Superior de Champotón",
+    "pagina_web": "https://champoton.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Campeche, Campeche",
+    "nombre": "Universidad Autónoma de Campeche",
+    "pagina_web": "https://www.uacam.mx/"
+  },
+  {
+    "ubicacion": "Ciudad del Carmen, Campeche",
+    "nombre": "Universidad Autónoma del Carmen",
+    "pagina_web": "https://www.unacar.mx/"
+  },
+  {
+    "ubicacion": "San Cristóbal de Las Casas, Chiapas (Sede)",
+    "nombre": "El Colegio de la Frontera Sur",
+    "pagina_web": "https://www.ecosur.mx/"
+  },
+  {
+    "ubicacion": "Tuxtla Gutiérrez, Chiapas",
+    "nombre": "Instituto Tecnológico de Tuxtla Gutiérrez",
+    "pagina_web": "https://www.tuxtla.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Tuxtla Gutiérrez, Chiapas",
+    "nombre": "Universidad Autónoma de Chiapas",
+    "pagina_web": "https://www.unach.mx/"
+  },
+  {
+    "ubicacion": "Tuxtla Gutiérrez, Chiapas",
+    "nombre": "Universidad de Ciencias y Artes de Chiapas",
+    "pagina_web": "https://www.unicach.mx/"
+  },
+  {
+    "ubicacion": "Suchiapa, Chiapas",
+    "nombre": "Universidad Politécnica de Chiapas",
+    "pagina_web": "https://www.upchiapas.edu.mx/"
+  },
+  {
+    "ubicacion": "Chihuahua, Chihuahua",
+    "nombre": "Centro de Investigación en Materiales Avanzados, S.C.",
+    "pagina_web": "https://cimav.edu.mx/"
+  },
+  {
+    "ubicacion": "Chihuahua, Chihuahua",
+    "nombre": "Instituto Tecnológico de Chihuahua",
+    "pagina_web": "https://itchihuahua.mx/"
+  },
+  {
+    "ubicacion": "Chihuahua, Chihuahua",
+    "nombre": "Instituto Tecnológico de Chihuahua II",
+    "pagina_web": "http://www.itchihuahuaii.edu.mx/"
+  },
+  {
+    "ubicacion": "Ciudad Juárez, Chihuahua",
+    "nombre": "Instituto Tecnológico de Ciudad Juárez",
+    "pagina_web": "http://cdjuarez.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Delicias, Chihuahua",
+    "nombre": "Instituto Tecnológico de Delicias",
+    "pagina_web": "https://www.delicias.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Hidalgo del Parral, Chihuahua",
+    "nombre": "Instituto Tecnológico de Parral",
+    "pagina_web": "http://www.itparral.edu.mx/"
+  },
+  {
+    "ubicacion": "Chihuahua, Chihuahua",
+    "nombre": "Universidad Autónoma de Chihuahua",
+    "pagina_web": "https://uach.mx/"
+  },
+  {
+    "ubicacion": "Ciudad Juárez, Chihuahua",
+    "nombre": "Universidad Autónoma de Ciudad Juárez",
+    "pagina_web": "https://www.uacj.mx/"
+  },
+  {
+    "ubicacion": "Chihuahua, Chihuahua",
+    "nombre": "Universidad Tecnológica de Chihuahua",
+    "pagina_web": "http://www.utch.edu.mx/"
+  },
+  {
+    "ubicacion": "Aguascalientes, Aguascalientes",
+    "nombre": "Centro de Investigación en Ciencias de Información Geoespacial",
+    "pagina_web": "http://www.centrogeo.org.mx/"
+  },
+  {
+    "ubicacion": "Ciudad de México",
+    "nombre": "Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional",
+    "pagina_web": "https://www.cinvestav.mx"
+  },
+  {
+    "ubicacion": "Ciudad de México (Sede)",
+    "nombre": "Centro de Investigación y Docencia Económicas, A.C.",
+    "pagina_web": "https://www.cide.edu/"
+  },
+  {
+    "ubicacion": "San Cristóbal de Las Casas, Chiapas (Sede)",
+    "nombre": "Centro de Investigaciones y Estudios Superiores en Antropología Social",
+    "pagina_web": "https://ciesas.edu.mx"
+  },
+  {
+    "ubicacion": "Ciudad de México",
+    "nombre": "El Colegio de México, A.C.",
+    "pagina_web": "https://www.colmex.mx/"
+  },
+   {
+    "ubicacion": "Ciudad de México",
+    "nombre": "Escuela Nacional de Antropología e Historia",
+    "pagina_web": "https://www.enah.edu.mx"
+  },
+  {
+    "ubicacion": "Ciudad de México",
+    "nombre": "Escuela Nacional de Conservación, Restauración y Museografía “Manuel del Castillo Negrete",
+    "pagina_web": "http://www.encrym.edu.mx/"
+  },
+  {
+    "ubicacion": "Ciudad de México (Sede)",
+    "nombre": "Facultad Latinoamericana de Ciencias Sociales",
+    "pagina_web": "https://www.flacso.edu.mx/"
+  },
+  {
+    "ubicacion": "Ciudad de México",
+    "nombre": "Instituto de Investigaciones Dr. José María Luis Mora",
+    "pagina_web": "https://www.institutomora.edu.mx/Inicio.html"
+  },
+  {
+    "ubicacion": "Ciudad de México",
+    "nombre": "Instituto Nacional de Bellas Artes y Literatura",
+    "pagina_web": "https://inba.gob.mx/"
+  },
+  {
+    "ubicacion": "Ciudad de México",
+    "nombre": "Instituto Politécnico Nacional",
+    "pagina_web": "https://www.ipn.mx/"
+  },
+  {
+    "ubicacion": "Ciudad de México",
+    "nombre": "Instituto Tecnológico Autónomo de México",
+    "pagina_web": "https://www.itam.mx/"
+  },
+  {
+    "ubicacion": "Ciudad de México",
+    "nombre": "Instituto Tecnológico de Iztapalapa",
+    "pagina_web": "https://www.iztapalapa.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Ciudad de México",
+    "nombre": "Instituto Tecnológico de Iztapalapa II",
+    "pagina_web": "https://iztapalapa2.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Ciudad de México",
+    "nombre": "Instituto Tecnológico de Tláhuac",
+    "pagina_web": "https://tlahuac.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Ciudad de México",
+    "nombre": "Universidad Autónoma de la Ciudad de México",
+    "pagina_web": "http://www.uacm.edu.mx/"
+  },
+  {
+    "ubicacion": "Ciudad de México (Sede)",
+    "nombre": "Universidad Autónoma Metropolitana",
+    "pagina_web": "https://www.uam.mx/"
+  },
+  {
+    "ubicacion": "Ciudad de México",
+    "nombre": "Universidad de Las Américas, A.C., Ciudad de México",
+    "pagina_web": "https://www.udlacdmx.mx/ver3/"
+  },
+  {
+    "ubicacion": "Ciudad de México",
+    "nombre": "Universidad del Claustro de Sor Juana, A.C.",
+    "pagina_web": "https://elclaustro.mx/"
+  },
+  {
+    "ubicacion": "Ciudad de México (Sede)",
+    "nombre": "Universidad del Valle de México",
+    "pagina_web": "https://www.universidaduvm.mx/"
+  },
+  {
+    "ubicacion": "Ciudad de México",
+    "nombre": "Universidad Iberoamericana, A.C.",
+    "pagina_web": "https://ibero.mx/"
+  },
+  {
+    "ubicacion": "Ciudad de México (Sede)",
+    "nombre": "Universidad Insurgentes",
+    "pagina_web": "http://www.universidadinsurgentes.edu.mx"
+  },
+  {
+    "ubicacion": "Ciudad de México",
+    "nombre": "Universidad Intercontinental",
+    "pagina_web": "https://www.uic.mx/"
+  },
+  {
+    "ubicacion": "Ciudad de México",
+    "nombre": "Universidad La Salle, A.C.",
+    "pagina_web": "https://lasalle.mx/"
+  },
+  {
+    "ubicacion": "Ciudad de México (Sede)",
+    "nombre": "Universidad Nacional Autónoma de México",
+    "pagina_web": "https://www.unam.mx/"
+  },
+  {
+    "ubicacion": "Ciudad de México (Sede)",
+    "nombre": "Universidad Panamericana",
+    "pagina_web": "https://www.up.edu.mx/es"
+  },
+  {
+    "ubicacion": "Ciudad de México (Sede)",
+    "nombre": "Universidad Pedagógica Nacional",
+    "pagina_web": "https://www.upn.mx/"
+  },
+  {
+    "ubicacion": "Ciudad de México (Sede)",
+    "nombre": "Universidad Tecnológica de México",
+    "pagina_web": "https://www.unitec.mx/"
+  },
+  {
+    "ubicacion": "Torreón, Coahuila",
+    "nombre": "Instituto Tecnológico de La Laguna",
+    "pagina_web": "http://www.itlalaguna.edu.mx"
+  },
+  {
+    "ubicacion": "Piedras Negras, Coahuila",
+    "nombre": "Instituto Tecnológico de Piedras Negras",
+    "pagina_web": "http://www.piedrasnegras.tecnm.mx"
+  },
+  {
+    "ubicacion": "Saltillo, Coahuila",
+    "nombre": "Instituto Tecnológico de Saltillo",
+    "pagina_web": "https://saltillo.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Saltillo, Coahuila",
+    "nombre": "Universidad Autónoma Agraria Antonio Narro",
+    "pagina_web": "https://www.uaaan.edu.mx/"
+  },
+  {
+    "ubicacion": "Saltillo, Coahuila",
+    "nombre": "Universidad Autónoma de Coahuila",
+    "pagina_web": "http://www.uadec.mx/"
+  },
+  {
+    "ubicacion": "Torreón, Coahuila",
+    "nombre": "Universidad Autónoma de La Laguna, A.C.",
+    "pagina_web": "https://www.ual.mx/"
+  },
+  {
+    "ubicacion": "Ramos Arizpe, Coahuila",
+    "nombre": "Universidad Tecnológica de Coahuila",
+    "pagina_web": "https://www.utc.edu.mx/"
+  },
+  {
+    "ubicacion": "Villa de Álvarez, Colima",
+    "nombre": "Instituto Tecnológico de Colima",
+    "pagina_web": "https://www.colima.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Colima, Colima (Sede)",
+    "nombre": "Universidad de Colima",
+    "pagina_web": "https://www.ucol.mx/"
+  },
+  {
+    "ubicacion": "Durango, Durango",
+    "nombre": "Instituto Tecnológico de Durango",
+    "pagina_web": "https://www.itdurango.edu.mx/"
+  },
+  {
+    "ubicacion": "Durango, Durango (Sede)",
+    "nombre": "Universidad Juárez del Estado de Durango",
+    "pagina_web": "https://www.ujed.mx/"
+  },
+  {
+    "ubicacion": "León, Guanajuato (Sede)",
+    "nombre": "Centro de Investigaciones en Óptica, A.C.",
+    "pagina_web": "https://www.cio.mx/"
+  },
+  {
+    "ubicacion": "Celaya, Guanajuato",
+    "nombre": "Instituto Tecnológico de Celaya",
+    "pagina_web": "https://celaya.tecnm.mx/"
+  },
+  {
+    "ubicacion": "León, Guanajuato",
+    "nombre": "Instituto Tecnológico de León",
+    "pagina_web": "https://leon.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Roque, Guanajuato",
+    "nombre": "Instituto Tecnológico de Roque",
+    "pagina_web": "http://roque.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Irapuato, Guanajuato (Sede)",
+    "nombre": "Instituto Tecnológico Superior de Irapuato",
+    "pagina_web": "https://irapuato.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Celaya, Guanajuato",
+    "nombre": "Universidad de Celaya",
+    "pagina_web": "https://www.udec.edu.mx/"
+  },
+  {
+    "ubicacion": "Guanajuato, Guanajuato (Sede)",
+    "nombre": "Universidad de Guanajuato",
+    "pagina_web": "https://www.ugto.mx/"
+  },
+  {
+    "ubicacion": "León, Guanajuato",
+    "nombre": "Universidad Iberoamericana León",
+    "pagina_web": "https://www.iberoleon.mx/"
+  },
+  {
+    "ubicacion": "Juventino Rosas, Guanajuato",
+    "nombre": "Universidad Politécnica de Juventino Rosas",
+    "pagina_web": "http://www.upjr.edu.mx/"
+  },
+  {
+    "ubicacion": "León, Guanajuato (Sede)",
+    "nombre": "Universidad Tecnológica de León",
+    "pagina_web": "http://www.utleon.edu.mx/"
+  },
+  {
+    "ubicacion": "Valle de Santiago, Guanajuato",
+    "nombre": "Universidad Tecnológica del Suroeste de Guanajuato",
+    "pagina_web": "http://www.utsoe.edu.mx/"
+  },
+  {
+    "ubicacion": "Purísima del Rincón, Guanajuato (Sede)",
+    "nombre": "Universidad Virtual del Estado de Guanajuato",
+    "pagina_web": "https://uveg.edu.mx/"
+  },
+  {
+    "ubicacion": "Acapulco de Juárez, Guerrero",
+    "nombre": "Instituto Tecnológico de Acapulco",
+    "pagina_web": "https://acapulco.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Chilpancingo, Guerrero (Sede)",
+    "nombre": "Universidad Autónoma de Guerrero",
+    "pagina_web": "https://www.uagro.mx/"
+  },
+  {
+    "ubicacion": "Acapulco de Juárez, Guerrero",
+    "nombre": "Universidad Hipócrates",
+    "pagina_web": "https://www.uhipocrates.edu.mx/"
+  },
+  {
+    "ubicacion": "Huejutla de Reyes, Hidalgo",
+    "nombre": "Instituto Tecnológico de Huejutla",
+    "pagina_web": "https://huejutla.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Pachuca de Soto, Hidalgo",
+    "nombre": "Instituto Tecnológico de Pachuca",
+    "pagina_web": "http://www.itpachuca.edu.mx"
+  },
+  {
+    "ubicacion": "Mineral de la Reforma, Hidalgo (Sede)",
+    "nombre": "Instituto Tecnológico Latinoamericano",
+    "pagina_web": "https://www.itla.edu.mx/"
+  },
+  {
+    "ubicacion": "Huichapan, Hidalgo",
+    "nombre": "Instituto Tecnológico Superior de Huichapan",
+    "pagina_web": "https://www.iteshu.edu.mx/iteshu/"
+  },
+  {
+    "ubicacion": "Mixquiahuala de Juárez, Hidalgo",
+    "nombre": "Instituto Tecnológico Superior del Occidente del Estado de Hidalgo",
+    "pagina_web": "http://www.itsoeh.edu.mx/"
+  },
+  {
+    "ubicacion": "Apan, Hidalgo",
+    "nombre": "Instituto Tecnológico Superior del Oriente del Estado de Hidalgo",
+    "pagina_web": "https://www.itesa.edu.mx/"
+  },
+  {
+    "ubicacion": "Pachuca de Soto, Hidalgo (Sede)",
+    "nombre": "Universidad Autónoma del Estado de Hidalgo",
+    "pagina_web": "https://www.uaeh.edu.mx/"
+  },
+  {
+    "ubicacion": "Tulancingo de Bravo, Hidalgo",
+    "nombre": "Universidad Politécnica de Tulancingo",
+    "pagina_web": "http://www.upt.edu.mx/"
+  },
+  {
+    "ubicacion": "Tolcayuca, Hidalgo",
+    "nombre": "Universidad Politécnica Metropolitana de Hidalgo",
+    "pagina_web": "http://www.upmetropolitana.edu.mx/"
+  },
+  {
+    "ubicacion": "Tula de Allende, Hidalgo",
+    "nombre": "Universidad Tecnológica de Tula-Tepeji",
+    "pagina_web": "https://www.uttt.edu.mx/"
+  },
+  {
+    "ubicacion": "Guadalajara, Jalisco (Sede)",
+    "nombre": "Centro de Enseñanza Técnica Industrial",
+    "pagina_web": "https://www.ceti.mx/cetinew/"
+  },
+   {
+    "ubicacion": "Ciudad Guzmán, Jalisco",
+    "nombre": "Instituto Tecnológico de Ciudad Guzmán",
+    "pagina_web": "http://www.cdguzman.tecnm.mx/pag/"
+  },
+  {
+    "ubicacion": "Tlaquepaque, Jalisco",
+    "nombre": "Instituto Tecnológico y de Estudios Superiores de Occidente, A.C.",
+    "pagina_web": "https://www.iteso.mx/"
+  },
+  {
+    "ubicacion": "Zapopan, Jalisco",
+    "nombre": "Universidad Autónoma de Guadalajara",
+    "pagina_web": "https://www.uag.mx/"
+  },
+  {
+    "ubicacion": "Guadalajara, Jalisco (Sede)",
+    "nombre": "Universidad de Guadalajara",
+    "pagina_web": "https://www.udg.mx/"
+  },
+  {
+    "ubicacion": "Zapopan, Jalisco",
+    "nombre": "Universidad del Valle de Atemajac",
+    "pagina_web": "https://www.univa.mx/"
+  },
+  {
+    "ubicacion": "Guadalajara, Jalisco",
+    "nombre": "Universidad Tecnológica de Jalisco",
+    "pagina_web": "https://www.utj.edu.mx/"
+  },
+  {
+    "ubicacion": "Texcoco, Estado de México (Sede)",
+    "nombre": "Colegio de Postgraduados",
+    "pagina_web": "https://www.colpos.mx/wb/"
+  },
+  {
+    "ubicacion": "Toluca, Estado de México",
+    "nombre": "Escuela Judicial del Estado de México",
+    "pagina_web": "http://www.pjedomex.gob.mx/ejem/"
+  },
+  {
+    "ubicacion": "Jilotepec, Estado de México",
+    "nombre": "Escuela Normal de Jilotepec",
+    "pagina_web": "https://normaljilotepec.edomex.gob.mx/"
+  },
+  {
+    "ubicacion": "San Juan Teotihuacán, Estado de México",
+    "nombre": "Escuela Normal de Teotihuacán",
+    "pagina_web": "https://normalteotihuacan.edomex.gob.mx/"
+  },
+  {
+    "ubicacion": "Texcoco, Estado de México",
+    "nombre": "Escuela Normal de Texcoco",
+    "pagina_web": "https://normaltexcoco.edomex.gob.mx/"
+  },
+  {
+    "ubicacion": "Tlalnepantla, Estado de México",
+    "nombre": "Escuela Normal de Tlalnepantla",
+    "pagina_web": "https://normaltlalnepantla.edomex.gob.mx"
+  },
+  {
+    "ubicacion": "Zumpango, Estado de México",
+    "nombre": "Escuela Normal de Zumpango",
+    "pagina_web": "https://normalzumpango.edomex.gob.mx/"
+  },
+  {
+    "ubicacion": "Toluca, Estado de México",
+    "nombre": "Escuela Normal No. 1 de Toluca",
+    "pagina_web": "https://normal1toluca.edomex.gob.mx/"
+  },
+  {
+    "ubicacion": "Nezahualcóyotl, Estado de México",
+    "nombre": "Escuela Normal No. 3 de Nezahualcóyotl",
+    "pagina_web": "https://normal3neza.edomex.gob.mx/"
+  },
+  {
+    "ubicacion": "Tlalnepantla, Estado de México",
+    "nombre": "Instituto Tecnológico de Tlalnepantla",
+    "pagina_web": "http://www.tlalnepantla.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Toluca, Estado de México",
+    "nombre": "Instituto Tecnológico de Toluca",
+    "pagina_web": "https://toluca.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Chalco, Estado de México",
+    "nombre": "Tecnológico de Estudios Superiores de Chalco",
+    "pagina_web": "https://tescha.edomex.gob.mx/"
+  },
+  {
+    "ubicacion": "Chimalhuacán, Estado de México",
+    "nombre": "Tecnológico de Estudios Superiores de Chimalhuacán",
+    "pagina_web": "https://teschi.edu.mx/"
+  },
+  {
+    "ubicacion": "Cuautitlán Izcalli, Estado de México",
+    "nombre": "Tecnológico de Estudios Superiores de Cuautitlán Izcalli",
+    "pagina_web": "https://tesci.edomex.gob.mx/"
+  },
+  {
+    "ubicacion": "Ecatepec de Morelos, Estado de México",
+    "nombre": "Tecnológico de Estudios Superiores de Ecatepec",
+    "pagina_web": "http://www.tese.edu.mx/"
+  },
+  {
+    "ubicacion": "Jilotepec, Estado de México",
+    "nombre": "Tecnológico de Estudios Superiores de Jilotepec",
+    "pagina_web": "http://tesji.edomex.gob.mx/"
+  },
+  {
+    "ubicacion": "San Felipe del Progreso, Estado de México",
+    "nombre": "Tecnológico de Estudios Superiores de San Felipe del Progreso",
+    "pagina_web": "https://tessfp.edomex.gob.mx/"
+  },
+  {
+    "ubicacion": "La Paz, Estado de México",
+    "nombre": "Tecnológico de Estudios Superiores del Oriente del Estado de México",
+    "pagina_web": "https://tesoem.edomex.gob.mx/"
+  },
+  {
+    "ubicacion": "Huixquilucan, Estado de México (Sede)",
+    "nombre": "Universidad Anáhuac México",
+    "pagina_web": "https://www.anahuac.mx/mexico/"
+  },
+  {
+    "ubicacion": "Texcoco, Estado de México",
+    "nombre": "Universidad Autónoma Chapingo",
+    "pagina_web": "https://www.chapingo.mx/"
+  },
+  {
+    "ubicacion": "Toluca, Estado de México (Sede)",
+    "nombre": "Universidad Autónoma del Estado de México",
+    "pagina_web": "https://www.uaemex.mx/"
+  },
+  {
+    "ubicacion": "Ecatepec de Morelos, Estado de México",
+    "nombre": "Universidad Estatal del Valle de Ecatepec",
+    "pagina_web": "https://www.uneve.edu.mx/"
+  },
+  {
+    "ubicacion": "Tultitlán, Estado de México",
+    "nombre": "Universidad Politécnica del Valle de México",
+    "pagina_web": "https://upvm.edomex.gob.mx/"
+  },
+  {
+    "ubicacion": "Nezahualcóyotl, Estado de México",
+    "nombre": "Universidad Tecnológica de Nezahualcóyotl",
+    "pagina_web": "http://www.utn.edu.mx/"
+  },
+  {
+    "ubicacion": "Tecámac, Estado de México",
+    "nombre": "Universidad Tecnológica de Tecámac",
+    "pagina_web": "https://uttecamac.edomex.gob.mx/"
+  },
+  {
+    "ubicacion": "Zinacantepec, Estado de México",
+    "nombre": "Universidad Tecnológica del Valle de Toluca",
+    "pagina_web": "https://utvt.edomex.gob.mx/"
+  },
+  {
+    "ubicacion": "Tlalnepantla, Estado de México",
+    "nombre": "Universidad Tecnológica Fidel Velázquez",
+    "pagina_web": "http://utfv.edomex.gob.mx/"
+  },
+  {
+    "ubicacion": "Zamora, Michoacán",
+    "nombre": "El Colegio de Michoacán, A.C.",
+    "pagina_web": "https://www.umich.mx/"
+  },
+  {
+    "ubicacion": "Jiquilpan, Michoacán",
+    "nombre": "Instituto Tecnológico de Jiquilpan",
+    "pagina_web": "http://www.jiquilpan.tecnm.mx/"
+  },
+  {
+    "ubicacion": "La Piedad, Michoacán",
+    "nombre": "Instituto Tecnológico de La Piedad",
+    "pagina_web": "https://piedad.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Morelia, Michoacán",
+    "nombre": "Instituto Tecnológico de Morelia",
+    "pagina_web": "https://www.morelia.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Zitácuaro, Michoacán",
+    "nombre": "Instituto Tecnológico de Zitácuaro",
+    "pagina_web": "https://portal.itzitacuaro.edu.mx/"
+  },
+  {
+    "ubicacion": "Morelia, Michoacán (Sede)",
+    "nombre": "Universidad Michoacana de San Nicolás de Hidalgo",
+    "pagina_web": "https://www.umich.mx/"
+  },
+  {
+    "ubicacion": "Cuernavaca, Morelos",
+    "nombre": "Centro Nacional de Investigación y Desarrollo Tecnológico",
+    "pagina_web": "https://cenidet.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Cuernavaca, Morelos",
+    "nombre": "Instituto Nacional de Salud Pública",
+    "pagina_web": "https://www.insp.mx/"
+  },
+  {
+    "ubicacion": "Cuautla, Morelos",
+    "nombre": "Instituto Tecnológico de Cuautla",
+    "pagina_web": "https://www.cuautla.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Zacatepec, Morelos",
+    "nombre": "Instituto Tecnológico de Zacatepec",
+    "pagina_web": "http://www.itzacatepec.edu.mx/"
+  },
+  {
+    "ubicacion": "Cuernavaca, Morelos (Sede)",
+    "nombre": "Universidad Autónoma del Estado de Morelos",
+    "pagina_web": "https://www.uaem.mx/"
+  },
+  {
+    "ubicacion": "Emiliano Zapata, Morelos",
+    "nombre": "Universidad Tecnológica Emiliano Zapata del Estado de Morelos",
+    "pagina_web": "http://www.utez.edu.mx/"
+  },
+  {
+    "ubicacion": "Tepic, Nayarit",
+    "nombre": "Instituto Tecnológico de Tepic",
+    "pagina_web": "https://www.tepic.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Tepic, Nayarit (Sede)",
+    "nombre": "Universidad Autónoma de Nayarit",
+    "pagina_web": "http://www.uan.edu.mx"
+  },
+  {
+    "ubicacion": "Monterrey, Nuevo León",
+    "nombre": "Centro de Estudios Universitarios Monterrey",
+    "pagina_web": "https://www.universidadceu.mx/"
+  },
+  {
+    "ubicacion": "Monterrey, Nuevo León (Sede)",
+    "nombre": "Enseñanza e Investigación Superior, A.C. (UNIVERSIDAD TECMILENIO)",
+    "pagina_web": "https://www.tecmilenio.mx/es"
+  },
+  {
+    "ubicacion": "Linares, Nuevo León",
+    "nombre": "Instituto Tecnológico de Linares",
+    "pagina_web": "http://www.itlinares.edu.mx"
+  },
+  {
+    "ubicacion": "Guadalupe, Nuevo León",
+    "nombre": "Instituto Tecnológico de Nuevo León",
+    "pagina_web": "http://www.itnl.edu.mx"
+  },
+  {
+    "ubicacion": "Monterrey, Nuevo León (Sede)",
+    "nombre": "Instituto Tecnológico y de Estudios Superiores de Monterrey",
+    "pagina_web": "https://tec.mx/es"
+  },
+  {
+    "ubicacion": "San Nicolás de los Garza, Nuevo León (Sede)",
+    "nombre": "Universidad Autónoma de Nuevo León",
+    "pagina_web": "https://www.uanl.mx/"
+  },
+  {
+    "ubicacion": "Montemorelos, Nuevo León",
+    "nombre": "Universidad de Montemorelos",
+    "pagina_web": "https://www.um.edu.mx/"
+  },
+  {
+    "ubicacion": "San Pedro Garza García, Nuevo León",
+    "nombre": "Universidad de Monterrey",
+    "pagina_web": "https://www.udem.edu.mx/es"
+  },
+  {
+    "ubicacion": "Monterrey, Nuevo León",
+    "nombre": "Universidad Regiomontana, A.C.",
+    "pagina_web": "https://www.u-erre.mx/"
+  },
+  {
+    "ubicacion": "Oaxaca de Juárez, Oaxaca",
+    "nombre": "Instituto Tecnológico de Oaxaca",
+    "pagina_web": "http://www.itoaxaca.edu.mx/"
+  },
+  {
+    "ubicacion": "San Juan Bautista Tuxtepec, Oaxaca",
+    "nombre": "Instituto Tecnológico de Tuxtepec",
+    "pagina_web": "https://www.tuxtepec.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Ciudad Ixtepec, Oaxaca",
+    "nombre": "Instituto Tecnológico del Istmo",
+    "pagina_web": "https://istmo.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Oaxaca de Juárez, Oaxaca (Sede)",
+    "nombre": "Universidad Autónoma Benito Juárez de Oaxaca",
+    "pagina_web": "http://www.uabjo.mx/"
+  },
+  {
+    "ubicacion": "Ixtlán de Juárez, Oaxaca",
+    "nombre": "Universidad de la Sierra Juárez",
+    "pagina_web": "http://www.unsij.edu.mx/"
+  },
+  {
+    "ubicacion": "Miahuatlán de Porfirio Díaz, Oaxaca",
+    "nombre": "Universidad de la Sierra Sur",
+    "pagina_web": "http://www.unsis.edu.mx/"
+  },
+  {
+    "ubicacion": "Puebla, Puebla (Sede)",
+    "nombre": "Benemérita Universidad Autónoma de Puebla",
+    "pagina_web": "http://www.buap.mx/"
+  },
+  {
+    "ubicacion": "Puebla, Puebla",
+    "nombre": "Escuela Normal Superior Federalizada del Estado de Puebla",
+    "pagina_web": "http://ensfep.com.mx/"
+  },
+  {
+    "ubicacion": "San Andrés Cholula, Puebla (Sede)",
+    "nombre": "Fundación Universidad de Las Américas, Puebla",
+    "pagina_web": "https://www.udlap.mx/web/"
+  },
+  {
+    "ubicacion": "Tonantzintla, Puebla",
+    "nombre": "Instituto Nacional de Astrofísica, Óptica y Electrónica",
+    "pagina_web": "https://www.inaoep.mx/"
+  },
+  {
+    "ubicacion": "Puebla, Puebla",
+    "nombre": "Instituto Tecnológico de Puebla",
+    "pagina_web": "https://www.puebla.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Tehuacán, Puebla",
+    "nombre": "Instituto Tecnológico de Tehuacán",
+    "pagina_web": "http://www.ittehuacan.edu.mx/"
+  },
+  {
+    "ubicacion": "Acatlán de Osorio, Puebla",
+    "nombre": "Instituto Tecnológico Superior de Acatlán de Osorio",
+    "pagina_web": "http://www.itsao.edu.mx/"
+  },
+  {
+    "ubicacion": "Atlixco, Puebla",
+    "nombre": "Instituto Tecnológico Superior De Atlixco",
+    "pagina_web": "https://atlixco.tecnm.mx/inicio.php"
+  },
+  {
+    "ubicacion": "Xicotepec de Juárez, Puebla",
+    "nombre": "Instituto Tecnológico Superior de La Sierra Norte de Puebla",
+    "pagina_web": "https://www.itssnp.edu.mx/"
+  },
+  {
+    "ubicacion": "San Martín Texmelucan, Puebla",
+    "nombre": "Instituto Tecnológico Superior de San Martín Texmelucan",
+    "pagina_web": "http://www.itssmt.edu.mx/"
+  },
+  {
+    "ubicacion": "Teziutlán, Puebla",
+    "nombre": "Instituto Tecnológico Superior de Teziutlán",
+    "pagina_web": "https://teziutlan.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Zacapoaxtla, Puebla",
+    "nombre": "Instituto Tecnológico Superior de Zacapoaxtla",
+    "pagina_web": "https://zacapoaxtla.tecnm.mx/"
+  },
+  {
+    "ubicacion": "San Andrés Cholula, Puebla (Sede)",
+    "nombre": "Universidad Anáhuac Puebla",
+    "pagina_web": "https://www.anahuac.mx/puebla/"
+  },
+  {
+    "ubicacion": "Huauchinango, Puebla",
+    "nombre": "Universidad de la Sierra, A.C.",
+    "pagina_web": "https://usac.edu.mx/"
+  },
+  {
+    "ubicacion": "Tehuacán, Puebla",
+    "nombre": "Universidad de Oriente",
+    "pagina_web": "https://www.uo.edu.mx/inicio"
+  },
+  {
+    "ubicacion": "Puebla, Puebla",
+    "nombre": "Universidad Del Valle De Puebla",
+    "pagina_web": "https://www.uvp.mx/"
+  },
+  {
+    "ubicacion": "Puebla, Puebla (Sede)",
+    "nombre": "Universidad Iberoamericana Puebla",
+    "pagina_web": "https://www.iberopuebla.mx/"
+  },
+  {
+    "ubicacion": "Puebla, Puebla (Sede)",
+    "nombre": "Universidad Popular Autónoma del Estado de Puebla",
+    "pagina_web": "https://www.upaep.mx/"
+  },
+  {
+    "ubicacion": "Huejotzingo, Puebla",
+    "nombre": "Universidad Tecnológica de Huejotzingo",
+    "pagina_web": "https://www.uth.edu.mx/"
+  },
+  {
+    "ubicacion": "Puebla, Puebla",
+    "nombre": "Universidad Tecnológica de Puebla",
+    "pagina_web": "http://www.utpuebla.edu.mx/"
+  },
+  {
+    "ubicacion": "Tecamachalco, Puebla",
+    "nombre": "Universidad Tecnológica de Tecamachalco",
+    "pagina_web": "https://uttecam.edu.mx/html/"
+  },
+  {
+    "ubicacion": "Tehuacán, Puebla",
+    "nombre": "Universidad Tecnológica de Tehuacán",
+    "pagina_web": "https://www.uttehuacan.edu.mx/web/"
+  },
+  {
+    "ubicacion": "Xicotepec de Juárez, Puebla",
+    "nombre": "Universidad Tecnológica de Xicotepec de Juárez",
+    "pagina_web": "http://www.utxicotepec.edu.mx/"
+  },
+  {
+    "ubicacion": "Pedro Escobedo, Querétaro (Sede)",
+    "nombre": "Centro de Investigación y Desarrollo Tecnológico en Electroquímica, S.C.",
+    "pagina_web": "https://www.cideteq.mx/"
+  },
+  {
+    "ubicacion": "Querétaro, Querétaro",
+    "nombre": "Instituto Tecnológico de Querétaro",
+    "pagina_web": "https://queretaro.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Querétaro, Querétaro (Sede)",
+    "nombre": "Universidad Autónoma de Querétaro",
+    "pagina_web": "https://www.uaq.mx/"
+  },
+  {
+    "ubicacion": "Querétaro, Querétaro",
+    "nombre": "Universidad Tecnológica de Querétaro",
+    "pagina_web": "https://www.uteq.edu.mx/"
+  },
+  {
+    "ubicacion": "San Juan del Río, Querétaro",
+    "nombre": "Universidad Tecnológica de San Juan del Río",
+    "pagina_web": "https://utsjr.edu.mx/"
+  },
+  {
+    "ubicacion": "Cancún, Quintana Roo",
+    "nombre": "Instituto Tecnológico de Cancún",
+    "pagina_web": "https://www.cancun.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Chetumal, Quintana Roo",
+    "nombre": "Instituto Tecnológico de Chetumal",
+    "pagina_web": "http://www.itchetumal.edu.mx"
+  },
+  {
+    "ubicacion": "Chetumal, Quintana Roo (Sede)",
+    "nombre": "Universidad Autónoma del Estado de Quintana Roo",
+    "pagina_web": "https://www.uqroo.mx/"
+  },
+  {
+    "ubicacion": "Cancún, Quintana Roo",
+    "nombre": "Universidad del Caribe",
+    "pagina_web": "https://www.unicaribe.mx/"
+  },
+  {
+    "ubicacion": "San Luis Potosí, San Luis Potosí (Sede)",
+    "nombre": "Benemérita y Centenaria Escuela Normal del Estado de San Luis Potosí",
+    "pagina_web": "http://beceneslp.edu.mx/pagina/"
+  },
+  {
+    "ubicacion": "San Luis Potosí, San Luis Potosí (Sede)",
+    "nombre": "Instituto Potosino de Investigación Científica y Tecnológica, A.C.",
+    "pagina_web": "https://www.ipicyt.edu.mx/"
+  },
+  {
+    "ubicacion": "Ciudad Valles, San Luis Potosí",
+    "nombre": "Instituto Tecnológico de Ciudad Valles",
+    "pagina_web": "http://www.tecvalles.mx/web/"
+  },
+  {
+    "ubicacion": "Matehuala, San Luis Potosí",
+    "nombre": "Instituto Tecnológico de Matehuala",
+    "pagina_web": "https://matehuala.tecnm.mx/"
+  },
+  {
+    "ubicacion": "San Luis Potosí, San Luis Potosí",
+    "nombre": "Instituto Tecnológico de San Luis Potosí",
+    "pagina_web": "https://slp.tecnm.mx/directivos/"
+  },
+   {
+    "ubicacion": "San Luis Potosí, San Luis Potosí",
+    "nombre": "Instituto Tecnológico Superior de San Luis Potosí, Capital",
+    "pagina_web": "https://slpotosicapital.tecnm.mx//"
+  },
+  {
+    "ubicacion": "San Luis Potosí, San Luis Potosí (Sede)",
+    "nombre": "Universidad Autónoma de San Luis Potosí",
+    "pagina_web": "http://www.uaslp.mx"
+  },
+  {
+    "ubicacion": "Culiacán, Sinaloa",
+    "nombre": "Instituto Tecnológico de Culiacán",
+    "pagina_web": "https://culiacan.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Los Mochis, Sinaloa",
+    "nombre": "Instituto Tecnológico de Los Mochis",
+    "pagina_web": "https://www.mochis.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Culiacán, Sinaloa (Sede)",
+    "nombre": "Universidad Autónoma de Occidente",
+    "pagina_web": "https://uadeo.mx/"
+  },
+  {
+    "ubicacion": "Culiacán, Sinaloa (Sede)",
+    "nombre": "Universidad Autónoma de Sinaloa",
+    "pagina_web": "https://www.uas.edu.mx/"
+  },
+  {
+    "ubicacion": "Hermosillo, Sonora (Sede)",
+    "nombre": "Centro de Investigación en Alimentación y Desarrollo, A.C.",
+    "pagina_web": "https://www.ciad.mx/"
+  },
+  {
+    "ubicacion": "Hermosillo, Sonora (Sede)",
+    "nombre": "El Colegio de Sonora",
+    "pagina_web": "https://www.colson.edu.mx/"
+  },
+  {
+    "ubicacion": "Hermosillo, Sonora",
+    "nombre": "Instituto Tecnológico de Hermosillo",
+    "pagina_web": "http://www.ith.mx"
+  },
+  {
+    "ubicacion": "Nogales, Sonora",
+    "nombre": "Instituto Tecnológico de Nogales",
+    "pagina_web": "http://nogales.tecnm.mx/index.asp"
+  },
+  {
+    "ubicacion": "Ciudad Obregón, Sonora (Sede)",
+    "nombre": "Instituto Tecnológico de Sonora",
+    "pagina_web": "https://www.itson.mx/Paginas/index.aspx"
+  },
+  {
+    "ubicacion": "Ciudad Obregón, Sonora",
+    "nombre": "Instituto Tecnológico Superior de Cajeme",
+    "pagina_web": "https://www.itesca.edu.mx/"
+  },
+  {
+    "ubicacion": "Hermosillo, Sonora (Sede)",
+    "nombre": "Universidad de Sonora",
+    "pagina_web": "https://www.unison.mx/"
+  },
+  {
+    "ubicacion": "Hermosillo, Sonora",
+    "nombre": "Universidad Estatal de Sonora",
+    "pagina_web": "https://www.ues.mx/"
+  },
+  {
+    "ubicacion": "Hermosillo, Sonora",
+    "nombre": "Universidad Tecnológica de Hermosillo",
+    "pagina_web": "http://www.uthermosillo.edu.mx/"
+  },
+  {
+    "ubicacion": "Benito Juárez (Etchojoa), Sonora",
+    "nombre": "Universidad Tecnológica del Sur de Sonora",
+    "pagina_web": "https://uts.sonora.gob.mx/"
+  },
+  {
+    "ubicacion": "Villahermosa, Tabasco",
+    "nombre": "Instituto Tecnológico de Villahermosa",
+    "pagina_web": "http://villahermosa.tecnm.mx/site/"
+  },
+  {
+    "ubicacion": "Huimanguillo, Tabasco",
+    "nombre": "Instituto Tecnológico Superior de Villa La Venta",
+    "pagina_web": "http://laventa.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Villahermosa, Tabasco (Sede)",
+    "nombre": "Universidad Juárez Autónoma de Tabasco",
+    "pagina_web": "https://www.ujat.mx/"
+  },
+  {
+    "ubicacion": "Ciudad Madero, Tamaulipas",
+    "nombre": "Instituto Tecnológico de Ciudad Madero",
+    "pagina_web": "http://www.cdmadero.tecnm.mx"
+  },
+  {
+    "ubicacion": "Ciudad Victoria, Tamaulipas",
+    "nombre": "Instituto Tecnológico de Ciudad Victoria",
+    "pagina_web": "http://www.itvictoria.edu.mx"
+  },
+  {
+    "ubicacion": "Matamoros, Tamaulipas",
+    "nombre": "Instituto Tecnológico de Matamoros",
+    "pagina_web": "https://www.itmatamoros.edu.mx/"
+  },
+  {
+    "ubicacion": "Nuevo Laredo, Tamaulipas",
+    "nombre": "Instituto Tecnológico de Nuevo Laredo",
+    "pagina_web": "https://nlaredo.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Reynosa, Tamaulipas",
+    "nombre": "Instituto Tecnológico de Reynosa",
+    "pagina_web": "https://www.reynosa.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Reynosa, Tamaulipas",
+    "nombre": "U.P.N. Unidad 285 Reynosa",
+    "pagina_web": "http://www.upn285.edu.mx"
+  },
+  {
+    "ubicacion": "Ciudad Victoria, Tamaulipas (Sede)",
+    "nombre": "Universidad Autónoma de Tamaulipas",
+    "pagina_web": "https://www.uat.edu.mx/"
+  },
+  {
+    "ubicacion": "Tampico, Tamaulipas",
+    "nombre": "Universidad del Noreste, A.C.",
+    "pagina_web": "https://www.une.edu.mx/es/"
+  },
+  {
+    "ubicacion": "Apizaco, Tlaxcala",
+    "nombre": "Instituto Tecnológico de Apizaco",
+    "pagina_web": "http://www.itapizaco.edu.mx"
+  },
+  {
+    "ubicacion": "Tlaxcala, Tlaxcala (Sede)",
+    "nombre": "Universidad Autónoma de Tlaxcala",
+    "pagina_web": "https://uatx.mx/"
+  },
+  {
+    "ubicacion": "Xalapa, Veracruz (Sede)",
+    "nombre": "Instituto de Ecología, A.C.",
+    "pagina_web": "https://www.inecol.mx/inecol/index.php/es/"
+  },
+  {
+    "ubicacion": "Minatitlán, Veracruz",
+    "nombre": "Instituto Tecnológico de Minatitlán",
+    "pagina_web": "http://www.itmina.edu.mx"
+  },
+  {
+    "ubicacion": "Orizaba, Veracruz",
+    "nombre": "Instituto Tecnológico de Orizaba",
+    "pagina_web": "http://www.orizaba.tecnm.mx"
+  },
+  {
+    "ubicacion": "Veracruz, Veracruz",
+    "nombre": "Instituto Tecnológico de Veracruz",
+    "pagina_web": "http://www.veracruz.tecnm.mx"
+  },
+  {
+    "ubicacion": "Misantla, Veracruz",
+    "nombre": "Instituto Tecnológico Superior de Misantla",
+    "pagina_web": "https://misantla.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Poza Rica, Veracruz",
+    "nombre": "Instituto Tecnológico Superior de Poza Rica",
+    "pagina_web": "http://www.itspozarica.edu.mx/"
+  },
+  {
+    "ubicacion": "Tantoyuca, Veracruz",
+    "nombre": "Instituto Tecnológico Superior de Tantoyuca",
+    "pagina_web": "https://itsta.edu.mx/"
+  },
+  {
+    "ubicacion": "Zongolica, Veracruz",
+    "nombre": "Instituto Tecnológico Superior de Zongolica",
+    "pagina_web": "https://zongolica.tecnm.mx/TecNM/"
+  },
+  {
+    "ubicacion": "Veracruz, Veracruz",
+    "nombre": "Universidad Cristóbal Colón",
+    "pagina_web": "http://www.ucc.mx"
+  },
+  {
+    "ubicacion": "Gutiérrez Zamora, Veracruz",
+    "nombre": "Universidad Tecnológica de Gutiérrez Zamora",
+    "pagina_web": "https://utgz.edu.mx/"
+  },
+  {
+    "ubicacion": "Xalapa, Veracruz (Sede)",
+    "nombre": "Universidad Veracruzana",
+    "pagina_web": "https://www.uv.mx/"
+  },
+  {
+    "ubicacion": "Mérida, Yucatán (Sede)",
+    "nombre": "Centro de Investigación Científica de Yucatán, A.C.",
+    "pagina_web": "https://www.cicy.mx/"
+  },
+  {
+    "ubicacion": "Mérida, Yucatán",
+    "nombre": "Instituto Tecnológico de Mérida",
+    "pagina_web": "https://www.merida.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Progreso, Yucatán",
+    "nombre": "Instituto Tecnológico Superior Progreso",
+    "pagina_web": "http://www.progreso.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Mérida, Yucatán (Sede)",
+    "nombre": "Universidad Autónoma de Yucatán",
+    "pagina_web": "https://www.uady.mx/"
+  },
+  {
+    "ubicacion": "Guadalupe, Zacatecas",
+    "nombre": "Instituto Tecnológico de Zacatecas",
+    "pagina_web": "https://zacatecas.tecnm.mx/"
+  },
+  {
+    "ubicacion": "Zacatecas, Zacatecas (Sede)",
+    "nombre": "Universidad Autónoma de Zacatecas (Francisco García Salinas)",
+    "pagina_web": "http://www.uaz.edu.mx"
+  }
+]

@@ -1,0 +1,24 @@
+#enlaceRedireccion{
+  text-align: center !important;
+  margin-top: 25px;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  flex: 1;
+}
+
+footer {
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
